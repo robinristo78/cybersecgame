@@ -1,0 +1,1009 @@
+
+[
+    {
+        "id": 0,
+        "difficulty_rating": 1,
+        "küsimus": "What does HTTPS stand for?",
+        "correct_answer": "HyperText Transfer Protocol Secure",
+        "wrong_answers": [
+            "HyperText Transfer Protocol Standard",
+            "High-Tech Transport System",
+            "Hypertext Transmission Port"
+        ]
+    },
+    {
+        "id": 1,
+        "difficulty_rating": 1,
+        "küsimus": "Which company created Windows?",
+        "correct_answer": "Microsoft",
+        "wrong_answers": [
+            "Apple",
+            "Google",
+            "Linux"
+        ]
+    },
+    {
+        "id": 2,
+        "difficulty_rating": 1,
+        "küsimus": "What does VPN stand for?",
+        "correct_answer": "Virtual Private Network",
+        "wrong_answers": [
+            "Virtual Proxy Name",
+            "Verified Protocol Node",
+            "Virtual Process Namespace"
+        ]
+    },
+    {
+        "id": 3,
+        "difficulty_rating": 1,
+        "küsimus": "Which device connects multiple computers to the internet?",
+        "correct_answer": "Router",
+        "wrong_answers": [
+            "Firewall",
+            "Modem",
+            "VPN"
+        ]
+    },
+    {
+        "id": 4,
+        "difficulty_rating": 1,
+        "küsimus": "Which key combination locks a Windows computer?",
+        "correct_answer": "Win + L",
+        "wrong_answers": [
+            "Ctrl + L",
+            "Ctrl + Alt + Del",
+            "Alt + Shift"
+        ]
+    },
+    {
+        "id": 5,
+        "difficulty_rating": 1,
+        "küsimus": "What protects against computer viruses?",
+        "correct_answer": "Antivirus",
+        "wrong_answers": [
+            "Firewall",
+            "Malware",
+            "Trojan"
+        ]
+    },
+    {
+        "id": 6,
+        "difficulty_rating": 1,
+        "küsimus": "Which symbol is commonly used in email addresses?",
+        "correct_answer": "@",
+        "wrong_answers": [
+            "#",
+            "%",
+            "&"
+        ]
+    },
+    {
+        "id": 7,
+        "difficulty_rating": 1,
+        "küsimus": "Which of the following is NOT a web browser?",
+        "correct_answer": "Photoshop",
+        "wrong_answers": [
+            "Chrome",
+            "Firefox",
+            "Edge"
+        ]
+    },
+    {
+        "id": 8,
+        "difficulty_rating": 1,
+        "küsimus": "What does IP stand for?",
+        "correct_answer": "Internet Protocol",
+        "wrong_answers": [
+            "Internal Path",
+            "Information Packet",
+            "Internet Proxy"
+        ]
+    },
+    {
+        "id": 9,
+        "difficulty_rating": 1,
+        "küsimus": "What is a small file websites use to remember user settings?",
+        "correct_answer": "Cookie",
+        "wrong_answers": [
+            "Cache",
+            "Log file",
+            "Firewall"
+        ]
+    },
+
+
+    {
+        "id": 10,
+        "difficulty_rating": 2,
+        "küsimus": "What does DDoS stand for?",
+        "correct_answer": "Distributed Denial of Service",
+        "wrong_answers": [
+            "Double Domain Online System",
+            "Data Deployment Over Server",
+            "Dynamic Data of Security"
+        ]
+    },
+    {
+        "id": 11,
+        "difficulty_rating": 2,
+        "küsimus": "What type of malware locks users out of their files?",
+        "correct_answer": "Ransomware",
+        "wrong_answers": [
+            "Spyware",
+            "Rootkit",
+            "Worm"
+        ]
+    },
+    {
+        "id": 12,
+        "difficulty_rating": 2,
+        "küsimus": "Which security measure uses a second step beyond a password?",
+        "correct_answer": "Two-factor authentication",
+        "wrong_answers": [
+            "Single sign-on",
+            "CAPTCHA",
+            "Private key encryption"
+        ]
+    },
+    {
+        "id": 13,
+        "difficulty_rating": 2,
+        "küsimus": "Which port is commonly used for HTTPS?",
+        "correct_answer": "443",
+        "wrong_answers": [
+            "21",
+            "80",
+            "25"
+        ]
+    },
+    {
+        "id": 14,
+        "difficulty_rating": 2,
+        "küsimus": "Which law protects personal data in the EU?",
+        "correct_answer": "GDPR",
+        "wrong_answers": [
+            "HIPAA",
+            "PCI DSS",
+            "NIST"
+        ]
+    },
+    {
+        "id": 15,
+        "difficulty_rating": 2,
+        "küsimus": "What is the unique identifier assigned to every networked device?",
+        "correct_answer": "MAC address",
+        "wrong_answers": [
+            "IP address",
+            "Domain name",
+            "Proxy address"
+        ]
+    },
+    {
+        "id": 16,
+        "difficulty_rating": 2,
+        "küsimus": "What is an unauthorized hidden entry point into a system?",
+        "correct_answer": "Backdoor",
+        "wrong_answers": [
+            "Proxy",
+            "VPN",
+            "Firewall"
+        ]
+    },
+    {
+        "id": 17,
+        "difficulty_rating": 2,
+        "küsimus": "Which protocol is used to resolve domain names to IP addresses?",
+        "correct_answer": "DNS",
+        "wrong_answers": [
+            "SMTP",
+            "DHCP",
+            "FTP"
+        ]
+    },
+    {
+        "id": 18,
+        "difficulty_rating": 2,
+        "küsimus": "Which attack tricks users into providing personal information?",
+        "correct_answer": "Phishing",
+        "wrong_answers": [
+            "Brute force",
+            "DDoS",
+            "Man-in-the-Middle"
+        ]
+    },
+    {
+        "id": 19,
+        "difficulty_rating": 2,
+        "küsimus": "Which attack attempts to overload a system with network traffic?",
+        "correct_answer": "DDoS",
+        "wrong_answers": [
+            "Brute force",
+            "Spoofing",
+            "Phishing"
+        ]
+    },
+
+
+    {
+        "id": 20,
+        "difficulty_rating": 3,
+        "küsimus": "Which tool is commonly used for network packet analysis?",
+        "correct_answer": "Wireshark",
+        "wrong_answers": [
+            "Nmap",
+            "Metasploit",
+            "VPN"
+        ]
+    },
+    {
+        "id": 21,
+        "difficulty_rating": 3,
+        "küsimus": "Which protocol is used for sending emails?",
+        "correct_answer": "SMTP",
+        "wrong_answers": [
+            "IMAP",
+            "FTP",
+            "SNMP"
+        ]
+    },
+    {
+        "id": 22,
+        "difficulty_rating": 3,
+        "küsimus": "Which type of malware disguises itself as legitimate software?",
+        "correct_answer": "Trojan",
+        "wrong_answers": [
+            "Worm",
+            "Spyware",
+            "Rootkit"
+        ]
+    },
+    {
+        "id": 23,
+        "difficulty_rating": 3,
+        "küsimus": "What is a brute force attack?",
+        "correct_answer": "Guessing passwords repeatedly",
+        "wrong_answers": [
+            "Overloading a server",
+            "Installing spyware",
+            "Encrypting user files"
+        ]
+    },
+    {
+        "id": 24,
+        "difficulty_rating": 3,
+        "küsimus": "Which type of malware records a user’s keystrokes?",
+        "correct_answer": "Keylogger",
+        "wrong_answers": [
+            "Ransomware",
+            "Rootkit",
+            "Botnet"
+        ]
+    },
+    {
+        "id": 25,
+        "difficulty_rating": 3,
+        "küsimus": "What is a group of compromised computers controlled remotely called?",
+        "correct_answer": "Botnet",
+        "wrong_answers": [
+            "Honeypot",
+            "Firewall",
+            "IDS"
+        ]
+    },
+    {
+        "id": 26,
+        "difficulty_rating": 3,
+        "küsimus": "Which term describes an attacker disguising as a trusted entity?",
+        "correct_answer": "Spoofing",
+        "wrong_answers": [
+            "Hashing",
+            "Firewalling",
+            "Penetration testing"
+        ]
+    },
+    {
+        "id": 27,
+        "difficulty_rating": 3,
+        "küsimus": "Which protocol secures email communication?",
+        "correct_answer": "TLS",
+        "wrong_answers": [
+            "HTTP",
+            "FTP",
+            "IPsec"
+        ]
+    },
+    {
+        "id": 28,
+        "difficulty_rating": 3,
+        "küsimus": "What does MFA stand for?",
+        "correct_answer": "Multi-Factor Authentication",
+        "wrong_answers": [
+            "Multiple Firewall Access",
+            "Malicious File Analysis",
+            "Metadata Function Authorization"
+        ]
+    },
+    {
+        "id": 29,
+        "difficulty_rating": 3,
+        "küsimus": "Which cyberattack manipulates database queries?",
+        "correct_answer": "SQL Injection",
+        "wrong_answers": [
+            "Phishing",
+            "DoS attack",
+            "XSS"
+        ]
+    },
+
+
+    {
+        "id": 30,
+        "difficulty_rating": 4,
+        "küsimus": "What does XSS stand for?",
+        "correct_answer": "Cross-Site Scripting",
+        "wrong_answers": [
+            "Extra Secure Software",
+            "XML Secure Server",
+            "Extended Security Suite"
+        ]
+    },
+    {
+        "id": 31,
+        "difficulty_rating": 4,
+        "küsimus": "Which encryption algorithm is asymmetric?",
+        "correct_answer": "RSA",
+        "wrong_answers": [
+            "AES",
+            "SHA-256",
+            "MD5"
+        ]
+    },
+    {
+        "id": 32,
+        "difficulty_rating": 4,
+        "küsimus": "Which port is commonly used for SSH?",
+        "correct_answer": "22",
+        "wrong_answers": [
+            "21",
+            "53",
+            "443"
+        ]
+    },
+    {
+        "id": 33,
+        "difficulty_rating": 4,
+        "küsimus": "Which term describes fake wireless networks used for attacks?",
+        "correct_answer": "Evil Twin Attack",
+        "wrong_answers": [
+            "Spoofing",
+            "Phishing",
+            "Backdoor"
+        ]
+    },
+    {
+        "id": 34,
+        "difficulty_rating": 4,
+        "küsimus": "What does SOC stand for in cybersecurity?",
+        "correct_answer": "Security Operations Center",
+        "wrong_answers": [
+            "System Overload Control",
+            "Secure Online Connection",
+            "Secure Object Communication"
+        ]
+    },
+    {
+        "id": 35,
+        "difficulty_rating": 4,
+        "küsimus": "Which organization creates global cybersecurity frameworks?",
+        "correct_answer": "NIST",
+        "wrong_answers": [
+            "WHO",
+            "W3C",
+            "ISO"
+        ]
+    },
+    {
+        "id": 36,
+        "difficulty_rating": 4,
+        "küsimus": "What is the goal of penetration testing?",
+        "correct_answer": "Finding security weaknesses",
+        "wrong_answers": [
+            "Spying on users",
+            "Cracking passwords",
+            "Encrypting data"
+        ]
+    },
+    {
+        "id": 37,
+        "difficulty_rating": 4,
+        "küsimus": "Which attack exploits session tokens?",
+        "correct_answer": "Session Hijacking",
+        "wrong_answers": [
+            "Ransomware",
+            "Phishing",
+            "SQL Injection"
+        ]
+    },
+    {
+        "id": 38,
+        "difficulty_rating": 4,
+        "küsimus": "What does IDS stand for?",
+        "correct_answer": "Intrusion Detection System",
+        "wrong_answers": [
+            "Internet Data Security",
+            "Internal Defense System",
+            "Information Data Shield"
+        ]
+    },
+    {
+        "id": 39,
+        "difficulty_rating": 4,
+        "küsimus": "Which attack involves tricking an employee into giving access?",
+        "correct_answer": "Social Engineering",
+        "wrong_answers": [
+            "Phishing",
+            "Spoofing",
+            "DDoS"
+        ]
+    },
+
+
+    {
+        "id": 40,
+        "difficulty_rating": 5,
+        "küsimus": "Which attack redirects web traffic to a malicious site?",
+        "correct_answer": "DNS Spoofing",
+        "wrong_answers": [
+            "Phishing",
+            "Cross-Site Scripting",
+            "SQL Injection"
+        ]
+    },
+    {
+        "id": 41,
+        "difficulty_rating": 5,
+        "küsimus": "Which term refers to using a fake identity to gain access?",
+        "correct_answer": "Impersonation",
+        "wrong_answers": [
+            "Spamming",
+            "Doxxing",
+            "Keylogging"
+        ]
+    },
+    {
+        "id": 42,
+        "difficulty_rating": 5,
+        "küsimus": "What type of attack is based on exploiting vulnerabilities in software?",
+        "correct_answer": "Exploits",
+        "wrong_answers": [
+            "Phishing",
+            "DDoS",
+            "Sniffing"
+        ]
+    },
+    {
+        "id": 43,
+        "difficulty_rating": 5,
+        "küsimus": "What does SSL stand for?",
+        "correct_answer": "Secure Sockets Layer",
+        "wrong_answers": [
+            "Secure Socket Layer",
+            "Simple Security Layer",
+            "Secure System Layer"
+        ]
+    },
+    {
+        "id": 44,
+        "difficulty_rating": 5,
+        "küsimus": "Which cyberattack uses multiple computers to attack a target?",
+        "correct_answer": "DDoS",
+        "wrong_answers": [
+            "Man-in-the-Middle",
+            "SQL Injection",
+            "Brute Force"
+        ]
+    },
+    {
+        "id": 45,
+        "difficulty_rating": 5,
+        "küsimus": "Which tool is used for vulnerability scanning?",
+        "correct_answer": "Nessus",
+        "wrong_answers": [
+            "Wireshark",
+            "Metasploit",
+            "Burp Suite"
+        ]
+    },
+    {
+        "id": 46,
+        "difficulty_rating": 5,
+        "küsimus": "Which organization is responsible for enforcing PCI DSS standards?",
+        "correct_answer": "PCI Security Standards Council",
+        "wrong_answers": [
+            "NIST",
+            "ICANN",
+            "IETF"
+        ]
+    },
+    {
+        "id": 47,
+        "difficulty_rating": 5,
+        "küsimus": "Which security term refers to the process of controlling access based on user roles?",
+        "correct_answer": "Role-based access control (RBAC)",
+        "wrong_answers": [
+            "Least privilege",
+            "Multifactor authentication",
+            "Mandatory access control"
+        ]
+    },
+    {
+        "id": 48,
+        "difficulty_rating": 5,
+        "küsimus": "Which attack attempts to deceive users into entering sensitive information by mimicking a legitimate website?",
+        "correct_answer": "Phishing",
+        "wrong_answers": [
+            "DDoS",
+            "DNS Spoofing",
+            "Brute Force"
+        ]
+    },
+    {
+        "id": 49,
+        "difficulty_rating": 5,
+        "küsimus": "Which algorithm is used for public key encryption?",
+        "correct_answer": "RSA",
+        "wrong_answers": [
+            "AES",
+            "DES",
+            "MD5"
+        ]
+    },
+
+
+{
+        "id": 50,
+        "difficulty_rating": 6,
+        "küsimus": "Which term describes a method for hiding data inside other data?",
+        "correct_answer": "Steganography",
+        "wrong_answers": [
+            "Encryption",
+            "Tunneling",
+            "Tokenization"
+        ]
+    },
+    {
+        "id": 51,
+        "difficulty_rating": 6,
+        "küsimus": "What is the purpose of a honeypot?",
+        "correct_answer": "To attract and trap hackers",
+        "wrong_answers": [
+            "To monitor network traffic",
+            "To scan for vulnerabilities",
+            "To encrypt sensitive data"
+        ]
+    },
+    {
+        "id": 52,
+        "difficulty_rating": 6,
+        "küsimus": "What kind of malware disguises itself as legitimate software?",
+        "correct_answer": "Trojan",
+        "wrong_answers": [
+            "Worm",
+            "Virus",
+            "Ransomware"
+        ]
+    },
+    {
+        "id": 53,
+        "difficulty_rating": 6,
+        "küsimus": "Which technique is used to defend against buffer overflow attacks?",
+        "correct_answer": "Data execution prevention (DEP)",
+        "wrong_answers": [
+            "Firewalls",
+            "Encryption",
+            "Intrusion detection systems"
+        ]
+    },
+    {
+        "id": 54,
+        "difficulty_rating": 6,
+        "küsimus": "Which of these is an example of multi-factor authentication?",
+        "correct_answer": "Password and fingerprint scan",
+        "wrong_answers": [
+            "Password and CAPTCHA",
+            "Password and IP restriction",
+            "Password and email verification"
+        ]
+    },
+    {
+        "id": 55,
+        "difficulty_rating": 6,
+        "küsimus": "Which attack involves overwhelming a server with requests?",
+        "correct_answer": "Denial of Service (DoS)",
+        "wrong_answers": [
+            "Phishing",
+            "Buffer Overflow",
+            "Brute Force"
+        ]
+    },
+    {
+        "id": 56,
+        "difficulty_rating": 6,
+        "küsimus": "What does the term 'rootkit' refer to?",
+        "correct_answer": "A tool for hiding malware",
+        "wrong_answers": [
+            "A type of encryption algorithm",
+            "A password recovery tool",
+            "A malicious website"
+        ]
+    },
+    {
+        "id": 57,
+        "difficulty_rating": 6,
+        "küsimus": "Which encryption algorithm is considered highly secure for symmetric encryption?",
+        "correct_answer": "AES",
+        "wrong_answers": [
+            "DES",
+            "RSA",
+            "MD5"
+        ]
+    },
+    {
+        "id": 58,
+        "difficulty_rating": 6,
+        "küsimus": "Which tool helps security professionals simulate real-world attacks?",
+        "correct_answer": "Metasploit",
+        "wrong_answers": [
+            "Burp Suite",
+            "Wireshark",
+            "Nessus"
+        ]
+    },
+    {
+        "id": 59,
+        "difficulty_rating": 6,
+        "küsimus": "Which cybersecurity principle limits user access to the minimum necessary for tasks?",
+        "correct_answer": "Least Privilege",
+        "wrong_answers": [
+            "Role-based access control",
+            "Access control lists",
+            "Encryption"
+        ]
+    },
+
+
+    {
+        "id": 60,
+        "difficulty_rating": 7,
+        "küsimus": "What type of attack is a Man-in-the-Middle (MITM) attack?",
+        "correct_answer": "Intercepting and altering communication",
+        "wrong_answers": [
+            "Phishing",
+            "Password cracking",
+            "Buffer overflow"
+        ]
+    },
+    {
+        "id": 61,
+        "difficulty_rating": 7,
+        "küsimus": "Which attack manipulates database queries to execute malicious code?",
+        "correct_answer": "SQL Injection",
+        "wrong_answers": [
+            "Cross-Site Scripting",
+            "Man-in-the-Middle",
+            "Phishing"
+        ]
+    },
+    {
+        "id": 62,
+        "difficulty_rating": 7,
+        "küsimus": "What does a vulnerability scanner do?",
+        "correct_answer": "Scans for weaknesses in software or networks",
+        "wrong_answers": [
+            "Encrypts sensitive data",
+            "Blocks malicious traffic",
+            "Manages passwords"
+        ]
+    },
+    {
+        "id": 63,
+        "difficulty_rating": 7,
+        "küsimus": "Which malware type replicates itself and spreads across systems?",
+        "correct_answer": "Worm",
+        "wrong_answers": [
+            "Trojan",
+            "Virus",
+            "Rootkit"
+        ]
+    },
+    {
+        "id": 64,
+        "difficulty_rating": 7,
+        "küsimus": "Which attack involves intercepting communication between two parties?",
+        "correct_answer": "Man-in-the-Middle",
+        "wrong_answers": [
+            "DDoS",
+            "Phishing",
+            "Spoofing"
+        ]
+    },
+    {
+        "id": 65,
+        "difficulty_rating": 7,
+        "küsimus": "What does a digital signature verify?",
+        "correct_answer": "The authenticity and integrity of data",
+        "wrong_answers": [
+            "The identity of the user",
+            "The encryption method used",
+            "The source of an email"
+        ]
+    },
+    {
+        "id": 66,
+        "difficulty_rating": 7,
+        "küsimus": "Which cyberattack involves tricking users into clicking on malicious links?",
+        "correct_answer": "Phishing",
+        "wrong_answers": [
+            "Spoofing",
+            "Brute Force",
+            "DDoS"
+        ]
+    },
+    {
+        "id": 67,
+        "difficulty_rating": 7,
+        "küsimus": "What is a common method for preventing unauthorized data access on a network?",
+        "correct_answer": "Firewall",
+        "wrong_answers": [
+            "Load balancing",
+            "VPN",
+            "Proxy"
+        ]
+    },
+    {
+        "id": 68,
+        "difficulty_rating": 7,
+        "küsimus": "Which attack involves exploiting vulnerabilities in web browsers?",
+        "correct_answer": "Cross-Site Scripting (XSS)",
+        "wrong_answers": [
+            "DDoS",
+            "Phishing",
+            "SQL Injection"
+        ]
+    },
+    {
+        "id": 69,
+        "difficulty_rating": 7,
+        "küsimus": "Which method is used to securely manage and store passwords?",
+        "correct_answer": "Password hashing",
+        "wrong_answers": [
+            "Encryption",
+            "Salting",
+            "Steganography"
+        ]
+    },
+
+
+    {
+        "id": 70,
+        "difficulty_rating": 8,
+        "küsimus": "What does a reverse shell allow an attacker to do?",
+        "correct_answer": "Gain control over a target machine",
+        "wrong_answers": [
+            "Deny access to a system",
+            "Collect passwords",
+            "Monitor user traffic"
+        ]
+    },
+    {
+        "id": 71,
+        "difficulty_rating": 8,
+        "küsimus": "Which cybersecurity practice involves examining an organization's security posture?",
+        "correct_answer": "Penetration testing",
+        "wrong_answers": [
+            "Intrusion detection",
+            "Data encryption",
+            "Access control"
+        ]
+    },
+    {
+        "id": 72,
+        "difficulty_rating": 8,
+        "küsimus": "Which technology is used to securely store passwords using a random salt value?",
+        "correct_answer": "bcrypt",
+        "wrong_answers": [
+            "MD5",
+            "RSA",
+            "AES"
+        ]
+    },
+    {
+        "id": 73,
+        "difficulty_rating": 8,
+        "küsimus": "What does the term 'phishing' refer to?",
+        "correct_answer": "Deceptive emails",
+        "wrong_answers": [
+            "Fake websites",
+            "Hacking passwords",
+            "Virus spreading"
+        ]
+    },
+    {
+        "id": 74,
+        "difficulty_rating": 8,
+        "küsimus": "Which cybersecurity protocol protects data in transit between two endpoints?",
+        "correct_answer": "TLS (Transport Layer Security)",
+        "wrong_answers": [
+            "IPsec",
+            "SSL",
+            "HTTPS"
+        ]
+    },
+    {
+        "id": 75,
+        "difficulty_rating": 8,
+        "küsimus": "Which attack uses malicious software to disrupt or damage a system?",
+        "correct_answer": "Ransomware",
+        "wrong_answers": [
+            "Man-in-the-Middle",
+            "Phishing",
+            "DNS Spoofing"
+        ]
+    },
+    {
+        "id": 76,
+        "difficulty_rating": 8,
+        "küsimus": "Which term describes scanning a network to identify weaknesses?",
+        "correct_answer": "Vulnerability scanning",
+        "wrong_answers": [
+            "Packet sniffing",
+            "SQL injection",
+            "Phishing"
+        ]
+    },
+    {
+        "id": 77,
+        "difficulty_rating": 8,
+        "küsimus": "Which attack involves exploiting user input to execute arbitrary commands?",
+        "correct_answer": "Command injection",
+        "wrong_answers": [
+            "Cross-Site Scripting",
+            "SQL injection",
+            "Buffer overflow"
+        ]
+    },
+    {
+        "id": 78,
+        "difficulty_rating": 8,
+        "küsimus": "What does IDS stand for?",
+        "correct_answer": "Intrusion Detection System",
+        "wrong_answers": [
+            "Internet Data Security",
+            "Internal Detection System",
+            "Independent Data Security"
+        ]
+    },
+    {
+        "id": 79,
+        "difficulty_rating": 8,
+        "küsimus": "Which term refers to an attack where malware silently monitors the activities of a system?",
+        "correct_answer": "Spyware",
+        "wrong_answers": [
+            "Worm",
+            "Ransomware",
+            "Adware"
+        ]
+    },
+
+
+    {
+        "id": 80,
+        "difficulty_rating": 9,
+        "küsimus": "Which protocol allows secure communication over an unsecured network?",
+        "correct_answer": "IPsec",
+        "wrong_answers": [
+            "HTTP",
+            "SSH",
+            "DNS"
+        ]
+    },
+    {
+        "id": 81,
+        "difficulty_rating": 9,
+        "küsimus": "Which vulnerability allows unauthorized access to a system by exploiting trust relationships?",
+        "correct_answer": "Privilege escalation",
+        "wrong_answers": [
+            "SQL injection",
+            "Cross-Site Scripting",
+            "Zero-day"
+        ]
+    },
+    {
+        "id": 82,
+        "difficulty_rating": 9,
+        "küsimus": "Which cybersecurity threat involves controlling multiple devices to perform malicious activities?",
+        "correct_answer": "Botnet",
+        "wrong_answers": [
+            "Phishing",
+            "DDoS", 
+            "Malware"
+        ]
+    },
+    {
+        "id": 83,
+        "difficulty_rating": 9,
+        "küsimus": "Which method is used to analyze and reverse engineer malware?",
+        "correct_answer": "Static analysis",
+        "wrong_answers": [
+            "Dynamic analysis", 
+            "Phishing", 
+            "Penetration testing"
+        ]
+    },
+    {
+        "id": 84,
+        "difficulty_rating": 9,
+        "küsimus": "What is the purpose of an SIEM system in cybersecurity?",
+        "correct_answer": "To aggregate and analyze security data",
+        "wrong_answers": [
+            "To encrypt data", 
+            "To block malicious traffic", 
+            "To authenticate users"
+        ]
+    },
+    {
+        "id": 85,
+        "difficulty_rating": 9,
+        "küsimus": "Which cyberattack involves modifying the code of a program to control its behavior?",
+        "correct_answer": "Code injection",
+        "wrong_answers": [
+            "Phishing", 
+            "Cross-Site Scripting", 
+            "Buffer overflow"
+        ]
+    },
+    {
+        "id": 86,
+        "difficulty_rating": 9,
+        "küsimus": "Which term refers to the protection of data at rest, in transit, and during processing?",
+        "correct_answer": "Data encryption",
+        "wrong_answers": [
+            "Data masking", 
+            "Data tokenization", 
+            "Data archiving"
+        ]
+    },
+    {
+        "id": 87,
+        "difficulty_rating": 9,
+        "küsimus": "Which tool is used to simulate attacks and test the defense mechanisms of a network?",
+        "correct_answer": "Metasploit",
+        "wrong_answers": [
+            "Wireshark", 
+            "Nessus", 
+            "Burp Suite"
+        ]
+    },
+    {
+        "id": 88,
+        "difficulty_rating": 9,
+        "küsimus": "Which type of attack involves overwhelming the system’s resources to cause failure?",
+        "correct_answer": "DoS (Denial of Service)",
+        "wrong_answers": [
+            "Phishing", 
+            "Buffer overflow", 
+            "Cross-Site Scripting"
+        ]
+    },
+    {
+        "id": 89,
+        "difficulty_rating": 9,
+        "küsimus": "Which cryptographic method allows a secure exchange of keys over an insecure channel?",
+        "correct_answer": "Diffie-Hellman key exchange",
+        "wrong_answers": [
+            "RSA", 
+            "AES", 
+            "SHA-256"
+        ]
+    }
+]
