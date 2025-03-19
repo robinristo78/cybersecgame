@@ -12,7 +12,7 @@ function App() {
       <div style={{padding: '20px', display: "flex"}}>
         <MuteButton />
         <HelpButton />
-        {/* <LeaderboardButton  /> */}
+        <LeaderboardButton  />
       </div>
       <div>
         <h1>Who Wants to Be a Millionaire?</h1>
