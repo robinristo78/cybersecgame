@@ -18,7 +18,7 @@ const RoundTimer = ({ duration = 60, isActive, onTimeUp, resetTrigger }) => {
         const timer = setInterval(() => {
             setTimeLeft((prev) => {
                 if (prev <= 1) {
-                    clearInterval(interval);
+                    clearInterval(timer);
                     onTimeUp();
                     return 0;
                 }
