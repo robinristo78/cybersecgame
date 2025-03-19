@@ -24,6 +24,13 @@ const GameController = ({ selectedDifficulty }) => {
     const [gameStatus, setGameStatus] = useState('notStarted');
     const [gameResult, setGameResult] = useState(null);
     const [currentQuestion, setCurrentQuestion] = useState(null);
+    const [usedQuestionIds, setUsedQuestionIds] = useState([]);
+
+    const getRandomQuestions = (questions) => {
+        const shuffled = [...questions].sort(() => Math.random() - 0.5);
+        return shuffled;
+    };
+    
 
     // Load a new question when difficultyRating or questionCount changes
     useEffect(() => {
@@ -31,14 +38,31 @@ const GameController = ({ selectedDifficulty }) => {
             console.error("Questions data is empty or missing.");
             return;
         }
-        const availableQuestions = questionsData.filter(q => q.difficulty_rating === difficultyRating);
+
+
+        const availableQuestions = questionsData.filter(
+            q => q.difficulty_rating === difficultyRating && !usedQuestionIds.includes(q.id)
+        );
+
+
         if (availableQuestions.length === 0) {
-            console.error("No questions available for difficulty:", difficultyRating);
+            console.error("No unused questions available for difficulty:", difficultyRating);
+            // Reset usedQuestionIds to recycle questions, or end game
+            setUsedQuestionIds([]);
+            const fallbackQuestions = questionsData.filter(q => q.difficulty_rating === difficultyRating);
+            const shuffledQuestions = getRandomQuestions(fallbackQuestions); // Shuffle all questions of the same difficulty
+            const newQuestion = shuffledQuestions[0];
+            setCurrentQuestion(newQuestion);
+            if (newQuestion) setUsedQuestionIds([newQuestion.id]);
             return;
         }
-        // Simple selection: cycle through questions or pick randomly
-        const questionIndex = questionCount % availableQuestions.length;
-        setCurrentQuestion(availableQuestions[questionIndex]);
+
+        const shuffledAvailableQuestions = getRandomQuestions(availableQuestions); // Shuffle available questions
+        const newQuestion = shuffledAvailableQuestions[0]; // Select the first shuffled question
+        setCurrentQuestion(newQuestion);
+        setUsedQuestionIds(prev => [...prev, newQuestion.id]);
+
+        console.log(`Picked question ID: ${newQuestion.id}, Difficulty: ${newQuestion.difficulty_rating}`);
     }, [difficultyRating, questionCount]);
 
     const saveGameHistory = (result) => {
