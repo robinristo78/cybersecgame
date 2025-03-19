@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { UnlockedDifficultiesContext } from '../components/UnlockedDifficultiesContext';
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const { unlockedDifficulties } = useContext(UnlockedDifficultiesContext); 
 
-  // Start the game with the selected difficulty
   const startGame = (difficulty) => {
-    navigate('/game', { state: { difficulty } });
+    navigate('/game', { state: { difficulty } }); 
   };
 
   return (
@@ -20,14 +21,24 @@ const HomePage = () => {
           Easy
         </button>
         <button
-          className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-700"
-          onClick={() => startGame('Medium')}
+          className={`px-4 py-2 rounded ${
+            unlockedDifficulties.includes('Medium')
+              ? 'bg-yellow-500 text-white hover:bg-yellow-700'
+              : 'bg-gray-400 text-gray-700 cursor-not-allowed'
+          }`}
+          onClick={() => unlockedDifficulties.includes('Medium') && startGame('Medium')}
+          disabled={!unlockedDifficulties.includes('Medium')}
         >
           Medium
         </button>
         <button
-          className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700"
-          onClick={() => startGame('Hard')}
+          className={`px-4 py-2 rounded ${
+            unlockedDifficulties.includes('Hard')
+              ? 'bg-red-500 text-white hover:bg-red-700'
+              : 'bg-gray-400 text-gray-700 cursor-not-allowed'
+          }`}
+          onClick={() => unlockedDifficulties.includes('Hard') && startGame('Hard')}
+          disabled={!unlockedDifficulties.includes('Hard')}
         >
           Hard
         </button>
