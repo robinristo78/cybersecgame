@@ -19,6 +19,9 @@ function App() {
         <HelpButton />
         {/* <LeaderboardButton  /> */}
       </div>
+      <div className="card">
+        <Login />
+      </div>
       <div>
         <h1 className="text-2xl font-bold mb-4">Who Wants To Be A Cyber Security Specialist?</h1>
 
