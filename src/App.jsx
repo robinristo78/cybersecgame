@@ -13,21 +13,23 @@ function App() {
 // import GamePage from './components/GamePage';
 
   return (
-    <div>
+    <div className="p-4 text-center">
       <div style={{padding: '20px', display: "flex"}}>
         <MuteButton />
         <HelpButton />
         {/* <LeaderboardButton  /> */}
       </div>
       <div>
-        <h1>Who Wants to Be a Millionaire?</h1>
+        <h1 className="text-2xl font-bold mb-4">Who Wants To Be A Cyber Security Specialist?</h1>
 
-          <div className="difficulty-selection">
-            <h2>Select Difficulty</h2>
-            <button onClick={() => setSelectedDifficulty('easy')}>Easy</button>
-            <button onClick={() => setSelectedDifficulty('medium')}>Medium</button>
-            <button onClick={() => setSelectedDifficulty('hard')}>Hard</button>
+          {/* Difficulty valiku nupud */}
+          <div className="flex justify-center space-x-4">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('easy')}>Easy</button>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('medium')}>Medium</button>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('hard')}>Hard</button>
           </div>
+
+          {/* comment: GameController'is on start nupp */}
           <GameController selectedDifficulty={selectedDifficulty} />
       </div>
     </div>

@@ -1,3 +1,6 @@
 node_modules
 src/components/Leaderboard
 src/components/Server
+
+src/components/HomePage.jsx
+src/components/GamePage.jsx
