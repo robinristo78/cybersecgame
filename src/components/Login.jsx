@@ -1,5 +1,7 @@
 import React from "react";
+import "./Login.css";
 import { GoogleLogin } from "@react-oauth/google";
+import googleLogo from '../assets/img/sound.png'; // Import your image
 
 const Login = () => {
   const handleSuccess = (response) => {
@@ -11,13 +13,26 @@ const Login = () => {
   };
 
   return (
-    <div className="w-80 h-32 relative bg-white rounded-[20px] shadow-md">
-      <div className="w-80 h-32 absolute bg-blue-600 rounded-[20px] border-4 border-yellow-400"></div>
-
-      <div className="absolute left-[50%] top-[20%] transform -translate-x-1/2 text-white text-3xl font-extrabold">
-        <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
+    <>
+      <div>katse</div>
+      <div className="Gradient">
+        <div className="Login_box">
+          <GoogleLogin
+            onSuccess={handleSuccess}
+            onError={handleError}
+            render={({ onClick, disabled }) => (
+              <img
+                src={googleLogo} // Use the imported image
+                alt="Login with Google"
+                onClick={onClick}
+                disabled={disabled}
+                style={{ cursor: "pointer" }} // Make it look clickable
+              />
+            )}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

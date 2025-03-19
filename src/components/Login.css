@@ -1,0 +1,18 @@
+.Gradient {
+    display: flex;
+    width: 330px;
+    height: 121px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, rgb(255, 230, 0), rgba(0, 0, 0, 0.727),  rgb(255, 230, 0));
+}
+
+.Login_box {
+    width: 310px;
+    height: 101px;
+    margin: auto 10px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #000670;
+}
+
