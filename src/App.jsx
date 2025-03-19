@@ -7,6 +7,11 @@ import GameController from './components/Game/GameController';
 function App() {
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
 
+// import React from 'react';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import HomePage from './components/HomePage';
+// import GamePage from './components/GamePage';
+
   return (
     <div>
       <div style={{padding: '20px', display: "flex"}}>
@@ -26,7 +31,16 @@ function App() {
           <GameController selectedDifficulty={selectedDifficulty} />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<HomePage />} />
+//         <Route path="/game" element={<GamePage />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+export default App;
