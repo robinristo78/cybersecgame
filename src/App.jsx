@@ -7,6 +7,8 @@ import Login from './components/UI/Login/Login'
 import Ask from './components/UI/Ask/Ask'
 import Poll from './components/UI/Poll/Poll'
 import MainLogo from './components/UI/Logo/Logo'
+import './App.css'
+import GameMusic from './components/GameMusic';
 import GameHistory from './components/Game/GameHistory';
 
 function App() {
@@ -20,29 +22,31 @@ function App() {
 
   return (
     <div className="p-4 text-center">
-      <div style={{padding: '20px', display: "flex"}}>
+      <div className="top-buttons" style={{padding: '20px', display: "flex"}}>
         <MuteButton />
         <HelpButton />
         {/* <LeaderboardButton  /> */}
         <GameHistory gameStatus={gameStatus} />
       </div>
-      <div className="card">
+      <div>
         <Login />
       </div>
-      <div className="card">
+      <div>
         <Poll />
       </div>
-      <div className="card">
+      <div>
         <Ask />
       </div>
-      <div className="card">
+      <div>
         <MainLogo />
       </div>
       <div>
+        <GameMusic />
+      </div>
           {/* comment: GameController'is on start nupp */}
           <GameController selectedDifficulty={selectedDifficulty} setSelectedDifficulty={setSelectedDifficulty}  />
       </div>
-    </div>
+
   );
 }
 

@@ -3,10 +3,14 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  position: relative; /* Ensure the root container is positioned */
 }
 
-.difficulty {
-  display: fixed;
-  bottom: 300px;
-  left: 50%;
+.Reward {
+  top: -400px; /* Adjust the top position as needed to place it under the main logo */
+  left: 10%;
+  transform: translateX(-50%); /* Center the buttons horizontally */
+  display: flex;
+  flex-direction: column; /* Align buttons in a column */
+  align-items: center; /* Center buttons horizontally */
 }

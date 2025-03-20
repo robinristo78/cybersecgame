@@ -10,6 +10,7 @@
 }
 
 .question-box {
+  top: 200px;
   width: 560px;
   height: 83px;
   margin: 5px auto;

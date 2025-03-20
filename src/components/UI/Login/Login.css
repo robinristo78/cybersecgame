@@ -1,21 +1,29 @@
 .Gradient {
-    position: fixed;
-    top: 20px;
-    right: 100px;
+    position: absolute; /* Fix the position of the login button */
+    top: 60px; /* Adjust the top position as needed */
+    right: 0px; /* Position it on the right side of the screen */
     display: flex;
-    width: 330px;
-    height: 121px;
+    align-items: center;
+    justify-content: center;
+    width: 265px;
+    height: 51px;
     flex-shrink: 0;
     border-radius: 20px;
     background: linear-gradient(to bottom,#FFE600, black, #FFE600);
 }
 
 .Login_box {
-    width: 320px;
-    height: 111px;
+    position: absolute; /* Fix the position of the login button */
+    top: 5px; /* Adjust the top position as needed */
+    right: 5px; /* Position it on the right side of the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 245px;
+    height: 40px;
     margin: auto 5px;
     flex-shrink: 0;
     border-radius: 20px;
     background: #000670;
+    z-index: 1000; /* Ensure it stays on top of other elements */
 }
-

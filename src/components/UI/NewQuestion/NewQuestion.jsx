@@ -1,7 +1,7 @@
 import React from 'react'
-import "./New.css";
+import "./NewQuestion.css";
 
-const New = () => {
+const NewQuestion = () => {
   return (
     <div>
         

@@ -4,6 +4,7 @@ import RewardSystem from './RewardSystem.jsx';
 import REWARDS from './RewardMap.jsx';
 import QuestionBox from '../Questions/QuestionBox.jsx';
 import questionsData from '../Questions/questions.json';
+import './GameController.css';
 
 const LOCAL_STORAGE_KEY = 'gameHistory';
 
@@ -148,9 +149,9 @@ const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
                     <button onClick={handleCorrectAnswer}>Correct</button>
                 </>
             )}
-
+            <div className='Reward'>
             <RewardSystem level={questionCount} />
-    
+            </div>
         </div>
     );
 };
