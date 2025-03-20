@@ -4,7 +4,7 @@ import AskActive from '../../../assets/img/Thought_active.png';
 
 const Ask = () => {
   return (
-    <div>        
+    <div className='img'>        
         <img src={AskActive} alt="Ask Active" />  
     </div>
   )

@@ -1,4 +1,7 @@
 .Gradient {
+    position: fixed;
+    top: 20px;
+    right: 100px;
     display: flex;
     width: 330px;
     height: 121px;

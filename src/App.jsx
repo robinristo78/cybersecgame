@@ -6,6 +6,7 @@ import GameController from './components/Game/GameController';
 import Login from './components/UI/Login/Login'
 import Ask from './components/UI/Ask/Ask'
 import Poll from './components/UI/Poll/Poll'
+import MainLogo from './components/UI/Logo/Logo'
 
 function App() {
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
@@ -31,11 +32,12 @@ function App() {
       <div className="card">
         <Ask />
       </div>
+      <div className="card">
+        <MainLogo />
+      </div>
       <div>
-        <h1 className="text-2xl font-bold mb-4">Who Wants To Be A Cyber Security Specialist?</h1>
-
           {/* Difficulty valiku nupud */}
-          <div className="flex justify-center space-x-4">
+          <div className="difficulty">
             <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('easy')}>Easy</button>
             <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('medium')}>Medium</button>
             <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('hard')}>Hard</button>

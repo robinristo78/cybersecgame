@@ -5,3 +5,8 @@
   text-align: center;
 }
 
+.difficulty {
+  display: fixed;
+  bottom: 300px;
+  left: 50%;
+}

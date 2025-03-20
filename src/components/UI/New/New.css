@@ -1,0 +1,7 @@
+.button_active {
+    background-image: url("../../../assets/img/New_active.png");
+}
+
+.button_inactive {
+    background-image: url("../../../assets/img/New_inactive.png");
+}

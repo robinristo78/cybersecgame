@@ -4,7 +4,7 @@ import PollsActive from '../../../assets/img/Polls_active.png';
 
 const Poll = () => {
   return (
-    <div>
+    <div className='img-poll'>
         <img src={PollsActive} alt="Polls Active" />  
     </div>
   )

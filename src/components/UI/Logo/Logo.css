@@ -1,0 +1,10 @@
+.img-logo {
+    padding: 1rem auto; /* Equivalent to p-4 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    width: 394px;
+    height: 394px;
+    border-radius: 50px;
+}

@@ -13,7 +13,6 @@ const Login = () => {
 
   return (
     <>
-      <div>katse</div>
       <div className="Gradient">
         <div className="Login_box">
           <GoogleLogin

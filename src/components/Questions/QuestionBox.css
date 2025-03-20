@@ -1,70 +1,70 @@
 /* QuestionBox.css */
 .question-box-border {
-    padding: 1rem auto; /* Equivalent to p-4 */
-    display: flex;
-    margin: 10px auto;
-    width: 570px;
-    height: 93px;
-    border-radius: 20px;
-    background: linear-gradient(to bottom,#FFE600, black, #FFE600);
-  }
+  padding: 1rem auto; /* Equivalent to p-4 */
+  display: flex;
+  margin: 10px auto;
+  width: 570px;
+  height: 93px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom,#FFE600, black, #FFE600);
+}
 
 .question-box {
-    width: 560px;
-    height: 83px;
-    margin: 5px auto;
-    border-radius: 20px;
-    background-color: #000670; /* Blue box */
-    color: white;
-  }
+  width: 560px;
+  height: 83px;
+  margin: 5px auto;
+  border-radius: 20px;
+  background-color: #000670; /* Blue box */
+  color: white;
+}
   
-  .question-title {
-    text-align: center;
-    font-size: 1.25rem; /* Equivalent to text-xl */
-    font-weight: bold; /* Equivalent to font-bold */
-    margin-bottom: 1rem; /* Equivalent to mb-4 */
-  }
+.question-title {
+  text-align: center;
+  font-size: 1.25rem; /* Equivalent to text-xl */
+  font-weight: bold; /* Equivalent to font-bold */
+  margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
   
-  .answer-grid {
-    display: grid;
-    margin-top: 70px;
-    grid-template-columns: repeat(2, 1fr); /* Equivalent to grid-cols-2 */
-    gap: 0.5rem; /* Equivalent to gap-4 */
-    justify-items: center;
-  }
+.answer-grid {
+  display: grid;
+  margin-top: 70px;
+  grid-template-columns: repeat(2, 1fr); /* Equivalent to grid-cols-2 */
+   gap: 0.5rem; /* Equivalent to gap-4 */
+  justify-items: center;
+}
   
-  .answer-button-border {
-    padding: 1rem auto; /* Equivalent to p-4 */
-    display: flex;
-    margin:5px auto;
-    width: 276px;
-    height: 59px;
-    border-radius: 20px;
-    background: linear-gradient(to bottom,#FFE600, black, #FFE600);
-  }
+.answer-button-border {
+  padding: 1rem auto; /* Equivalent to p-4 */
+  display: flex;
+  margin:5px auto;
+  width: 276px;
+  height: 59px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom,#FFE600, black, #FFE600);
+}
 
-  .answer-button {
-    width: 266px;
-    height: 49px;
-    margin: 5px auto;
-    border-radius: 20px;
-    background-color: #000670; /* Blue box */
-    color: white;
-  }
+.answer-button {
+  width: 266px;
+  height: 49px;
+  margin: 5px auto;
+  border-radius: 20px;
+  background-color: #000670; /* Blue box */
+  color: white;
+}
   
-  .correct-answer {
-    background-color: green; /* Equivalent to bg-green-500 */
-  }
+.correct-answer {
+  background-color: green; /* Equivalent to bg-green-500 */
+}
   
-  .wrong-answer {
-    background-color: red; /* Equivalent to bg-red-500 */
-  }
+.wrong-answer {
+  background-color: red; /* Equivalent to bg-red-500 */
+}
   
-  .correct-answer-light {
-    background-color: lightgreen; /* Equivalent to bg-green-300 */
-  }
+.correct-answer-light {
+  background-color: lightgreen; /* Equivalent to bg-green-300 */
+}
   
-  .default-answer {
-    background-color: #000670; /* Equivalent to bg-gray-200 */
-    color: white;
-  }
+.default-answer {
+  background-color: #000670; /* Equivalent to bg-gray-200 */
+  color: white;
+}
