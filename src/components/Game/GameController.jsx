@@ -172,7 +172,7 @@ const GameController = ({ selectedDifficulty, setSelectedDifficulty, gameStatus,
                                 )
                             )}
                         />
-                        <button onClick={handleCorrectAnswer}>Correct</button>
+                        {/* <button onClick={handleCorrectAnswer}>Correct</button> */}
                     </>
                 )
             }

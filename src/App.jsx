@@ -23,7 +23,7 @@ function App() {
     setIsLoggedIn(loggedInStatus);
   }, []);
 
-  const handleGameEnd = (result, questionCount) => {
+  const handleGameEnd = (result, questionCount, score) => {
     setGameStatus('over');
     setGameData({
       result,
@@ -45,9 +45,9 @@ function App() {
 
       <Login className="card" isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
 
-      <Poll />
+      {/* <Poll /> */}
 
-      <Ask />
+      {/* <Ask /> */}
 
       <MainLogo />
 
