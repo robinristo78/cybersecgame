@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-const RoundTimer = ({ duration = 60, isActive, onTimeUp }) => {
+const RoundTimer = ({ duration = 60, isActive, onTimeUp, resetTrigger }) => {
     const [timeLeft, setTimeLeft] = useState(duration);
+
+    useEffect(() => {
+        setTimeLeft(duration);
+    }, [resetTrigger, duration]);
 
     useEffect(() => {
         // kontroll: kas mäng runnib
@@ -14,7 +18,7 @@ const RoundTimer = ({ duration = 60, isActive, onTimeUp }) => {
         const timer = setInterval(() => {
             setTimeLeft((prev) => {
                 if (prev <= 1) {
-                    clearInterval(interval);
+                    clearInterval(timer);
                     onTimeUp();
                     return 0;
                 }
@@ -23,7 +27,7 @@ const RoundTimer = ({ duration = 60, isActive, onTimeUp }) => {
         }, 1000);
 
         return () => clearInterval(timer)
-    }, [isActive]);
+    }, [isActive, onTimeUp, duration]);
 
     return <div className="round-timer">Time Left: {timeLeft}s</div>
 }
