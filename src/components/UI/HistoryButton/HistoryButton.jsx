@@ -11,7 +11,7 @@ const HistoryButton = ({ children }) => {
 
     return (
         <div>
-            <button onClick={togglePopup}>Show History</button>
+            <button className="history-button" onClick={togglePopup}></button>
             <Popup show={showPopup} onClose={() => setShowPopup(false)}>
                     {children}
             </Popup>

@@ -28,16 +28,16 @@ function App() {
         {/* <LeaderboardButton  /> */}
         <GameHistory gameStatus={gameStatus} />
       </div>
-      <div className="card">
+      <div>
         <Login />
       </div>
-      <div className="card">
+      <div>
         <Poll />
       </div>
-      <div className="card">
+      <div>
         <Ask />
       </div>
-      <div className="card">
+      <div>
         <MainLogo />
       </div>
       <div>

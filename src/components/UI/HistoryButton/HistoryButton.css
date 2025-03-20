@@ -1,0 +1,10 @@
+.history-button {
+    background-image: url("../../../assets/img/Leaderboard.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 113px;
+    height: 103px;
+  }

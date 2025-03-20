@@ -149,9 +149,9 @@ const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
                     <button onClick={handleCorrectAnswer}>Correct</button>
                 </>
             )}
-
+            <div className='Reward'>
             <RewardSystem level={questionCount} />
-    
+            </div>
         </div>
     );
 };

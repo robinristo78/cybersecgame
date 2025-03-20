@@ -1,11 +1,13 @@
 .game-controller {
-    position:fixed;
-    top: 500px;
+    position: absolute; /* Fix the position of the login button */
+    top: 00px; /* Adjust the top position as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Ensure the container takes the full height of the viewport */
     position: relative;
 }
 
