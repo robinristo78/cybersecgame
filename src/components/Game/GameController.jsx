@@ -70,8 +70,8 @@ const GameController = ({ selectedDifficulty }) => {
         const newEntry = {
             played_at: new Date().toISOString(),
             difficulty: selectedDifficulty,
-            questionCount: questionCount + 1,
-            score: REWARDS[questionCount + 1] || 0,
+            questionCount: questionCount,
+            score: REWARDS[questionCount] || 0,
         };
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([...history, newEntry]));
     };
