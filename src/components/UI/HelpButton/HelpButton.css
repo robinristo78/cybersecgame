@@ -1,0 +1,9 @@
+.help-image-button {
+    background-image: url("../../../assets/img/RULES.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    width: 133px;
+    height: 123px;
+  }

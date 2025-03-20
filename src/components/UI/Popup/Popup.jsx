@@ -14,7 +14,7 @@ function Popup({ show, onClose, children }) {
     <div className="popup-overlay" onClick={handleOverlayClick}>
       <div className="popup-content-container">
         {children}
-        <button onClick={onClose}>Close</button>
+        <button onClick={onClose}>X</button>
       </div>
     </div>
   );

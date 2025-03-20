@@ -1,4 +1,4 @@
-.Gradient {
+.Border {
     display: flex;
     width: 330px;
     height: 121px;
@@ -7,7 +7,7 @@
     background: linear-gradient(to bottom,#FFE600, black, #FFE600);
 }
 
-.Login_box {
+.Button {
     width: 320px;
     height: 111px;
     margin: auto 5px;
@@ -16,3 +16,11 @@
     background: #000670;
 }
 
+.DifficultyButton { /* Added CSS for the button class */
+    background-color: #fc0000; /* Example: Light gray background */
+    border: 1px solid #ff0000;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }

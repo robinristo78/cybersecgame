@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Popup from "../Popup/Popup.jsx";
+import "./HelpButton.css";
 
 function HelpButton() {
     const [showPopup, setShowPopup] = useState(false);
@@ -10,7 +11,7 @@ function HelpButton() {
   
     return (
       <div>
-        <button onClick={togglePopup}>Help</button>
+        <button className="help-image-button" onClick={togglePopup}></button>
         <Popup show={showPopup} onClose={() => setShowPopup(false)}>
           <h2>HOW TO PLAY</h2>
           <p>You will be asked questions about cybersecurity.</p>
