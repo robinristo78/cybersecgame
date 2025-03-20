@@ -1,6 +1,7 @@
 import React from "react";
-import "./Login.css";
 import { GoogleLogin } from "@react-oauth/google";
+import "./Login.css";
+import signOutIcon from "../../../assets/img/signout.png";
 
 const Login = ({ isLoggedIn, setIsLoggedIn }) => {
   const handleSuccess = (response) => {
@@ -32,21 +33,18 @@ const handleLogout = () => {
   };
 
   return (
-    <div>
+    <div className="login-container">
       {isLoggedIn ? (
-        <button
-          className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700"
-          onClick={handleLogout}
-        >
-          Sign Out
+        <button className="login-button" onClick={handleLogout}>
+          <img src={signOutIcon} alt="Sign Out" className="signout-icon" />
         </button>
       ) : (
         <GoogleLogin
           onSuccess={handleSuccess}
-          onError={() => console.error("Google Login Failed")}
+          onError={handleError}
           render={({ onClick, disabled }) => (
             <button
-              className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700"
+              className="login-button"
               onClick={onClick}
               disabled={disabled}
             >

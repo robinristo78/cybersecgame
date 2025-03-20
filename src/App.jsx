@@ -35,8 +35,8 @@ function App() {
         {/* <LeaderboardButton  /> */}
         <GameHistory gameStatus={gameStatus} />
       </div>
-      <div className="card">
-        <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <div >
+        <Login className="card" isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       </div>
       <div>
         <Poll />
