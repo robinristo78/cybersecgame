@@ -18,7 +18,7 @@ function MuteButton() {
     return (
         <button
         onClick={handleMuteToggle}
-        className={`mute-button ${isMuted ? "muted" : ""}`}
+        className={`mute-button ${isMuted ? "" : "muted"}`}
       >
         {/* No text inside the button */}
       </button>
