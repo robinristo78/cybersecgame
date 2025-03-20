@@ -65,16 +65,17 @@ const GameController = ({ selectedDifficulty }) => {
         console.log(`Picked question ID: ${newQuestion.id}, Difficulty: ${newQuestion.difficulty_rating}`);
     }, [difficultyRating, questionCount]);
 
-    const saveGameHistory = (result) => {
+    const saveGameHistory = (result, newCount) => {
         const history = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
         const newEntry = {
             played_at: new Date().toISOString(),
             difficulty: selectedDifficulty,
-            questionCount: questionCount,
-            score: REWARDS[questionCount] || 0,
+            questionCount: newCount,
+            score: newCount === 15 ? 1000000 : (REWARDS[newCount] || 0), // Ensure 1M reward at 15
         };
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([...history, newEntry]));
     };
+    
 
     const startGame = () => {
         setGameStatus('active');
@@ -83,21 +84,23 @@ const GameController = ({ selectedDifficulty }) => {
         setDifficultyRating(initialDifficulty);
     };
 
-    const endGame = (result) => {
+    const endGame = (result, finalQuestionCount = questionCount) => {
         setGameStatus('over');
         setGameResult(result);
-        saveGameHistory(result);
+        saveGameHistory(result, finalQuestionCount);
     };
 
     const handleCorrectAnswer = () => {
         const newCount = questionCount + 1;
         setQuestionCount(newCount);
-        if (newCount >= 15) {
-            endGame('victory');
+    
+        if (newCount === 15) {
+            setTimeout(() => endGame('victory', newCount), 0); // Pass newCount
         } else if (newCount % 3 === 0) {
             setDifficultyRating((prev) => prev + 1);
         }
-        console.log(difficultyRating);
+    
+        // console.log(difficultyRating, questionCount, newCount);
     };
 
     const handleWrongAnswer = () => endGame('loss');
@@ -119,12 +122,14 @@ const GameController = ({ selectedDifficulty }) => {
                         onTimeUp={handleTimeUp}
                         renderQuestion={(onAnswer) => (
                             currentQuestion ? (
+                                
                                 <QuestionBox question={currentQuestion} onAnswer={onAnswer} />
                             ) : (
                                 <p>Loading question...</p>
                             )
                         )}
                     />
+                    <button onClick={handleCorrectAnswer}>Correct</button>
                 </>
             )}
 
