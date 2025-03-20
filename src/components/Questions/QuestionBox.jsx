@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import "./QuestionBox.css";
 
 const QuestionBox = ({ question, onAnswer }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
 
-  // If the question changes, reset the selected answer and correct answer display
   useEffect(() => {
     setSelectedAnswer(null);
     setShowCorrectAnswer(false);
@@ -26,27 +26,29 @@ const QuestionBox = ({ question, onAnswer }) => {
   );
 
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">{question.question}</h2>
-      <div className="grid grid-cols-2 gap-4">
-        {allAnswers.map((answer) => (
-          <button
-            key={answer}
-            className={`p-4 border rounded ${
-              selectedAnswer === answer
-                ? answer === question.correct_answer
-                  ? "bg-green-500" 
-                  : "bg-red-500"
-                : showCorrectAnswer && answer === question.correct_answer
-                ? "bg-green-300" 
-                : "bg-gray-200"
-            }`}
-            onClick={() => handleAnswerClick(answer)}
-            disabled={!!selectedAnswer} // Disable the buttons after an answer is selected
-          >
-            {answer}
-          </button>
-        ))}
+    <div className="question-box-border">
+      <div className="question-box">
+        <h2 className="question-title">{question.question}</h2>
+        <div className="answer-grid">
+          {allAnswers.map((answer) => (
+            <div className="answer-button-border" key={answer}> {/* Wrap the button with a div */}
+              <button
+                className={`answer-button ${selectedAnswer === answer
+                  ? answer === question.correct_answer
+                    ? "correct-answer"
+                    : "wrong-answer"
+                  : showCorrectAnswer && answer === question.correct_answer
+                    ? "correct-answer-light"
+                    : "default-answer"
+                }`}
+                onClick={() => handleAnswerClick(answer)}
+                disabled={!!selectedAnswer}
+              >
+                {answer}
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
