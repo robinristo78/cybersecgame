@@ -20,3 +20,49 @@
     align-items: center;
     justify-content: flex-start;
 }
+
+.difficulty-border {
+    display: flex;
+    width: 120px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background: linear-gradient(to bottom,#FFE600, black, #FFE600);
+}
+
+.difficulty {
+    background-color: #000670;
+    width: 110px;
+    height: 45px;
+    border-radius: 20px;
+    color: white;
+}
+
+.difficulty-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.Start-button-border {
+    display: flex;
+    width: 155px;
+    height: 65px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background: linear-gradient(to bottom,#FFE600, black, #FFE600);
+}
+
+.Start-button {
+    background-color: #000670;
+    width: 145px;
+    height: 55px;
+    border-radius: 20px;
+    color: white;
+}

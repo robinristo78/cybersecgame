@@ -10,7 +10,7 @@ const LOCAL_STORAGE_KEY = 'gameHistory';
 
 const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
     const baseDifficulty = 1;
-    
+
     const difficultyModifiers = {
         easy: 0,
         medium: 2,
@@ -30,7 +30,7 @@ const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
         const shuffled = [...questions].sort(() => Math.random() - 0.5);
         return shuffled;
     };
-    
+
 
     // Load a new question when difficultyRating or questionCount changes
     useEffect(() => {
@@ -83,7 +83,7 @@ const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
         };
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([...history, newEntry]));
     };
-    
+
 
     const startGame = () => {
         setGameStatus('active');
@@ -101,13 +101,13 @@ const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
     const handleCorrectAnswer = () => {
         const newCount = questionCount + 1;
         setQuestionCount(newCount);
-    
+
         if (newCount === 15) {
             setTimeout(() => endGame('victory', newCount), 0); // Pass newCount
         } else if (newCount % 3 === 0) {
             setDifficultyRating((prev) => prev + 1);
         }
-    
+
         // console.log(difficultyRating, questionCount, newCount);
     };
 
@@ -118,49 +118,65 @@ const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
         <div className="game-controller">
             {(gameStatus === 'notStarted' || gameStatus === 'over') && (
                 <>
-                {gameStatus === 'over' && (
-                    <div>
-                        {gameResult === 'victory' ? (
-                            <h1>Congratulations! You won the game!</h1>
-                        ) : (
-                            <h1>Game Over!</h1>
-                        )} 
-                    </div>
-                )}
-                <div className="difficulty">
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('easy')}>Easy</button>
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('medium')}>Medium</button>
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('hard')}>Hard</button>
-                    </div>
-                    <button onClick={startGame}>{gameStatus === 'over' ? 'Play Again' : 'Start Game'}</button>
-                </>
-            )}
-            
-            {gameStatus === 'active' && (
-                <>
-                    <Round
-                        difficultyRating={difficultyRating}
-                        roundNumber={questionCount + 1}
-                        isActive={gameStatus === 'active'}
-                        onCorrectAnswer={handleCorrectAnswer}
-                        onWrongAnswer={handleWrongAnswer}
-                        onTimeUp={handleTimeUp}
-                        renderQuestion={(onAnswer) => (
-                            currentQuestion ? (
-                                
-                                <QuestionBox question={currentQuestion} onAnswer={onAnswer} />
+                    {gameStatus === 'over' && (
+                        <div>
+                            {gameResult === 'victory' ? (
+                                <h1>Congratulations! You won the game!</h1>
                             ) : (
-                                <p>Loading question...</p>
-                            )
-                        )}
-                    />
-                    <button onClick={handleCorrectAnswer}>Correct</button>
+                                <h1>Game Over!</h1>
+                            )}
+                        </div>
+                    )}
+                    <div className="difficulty-buttons">
+
+                        <div className="difficulty-border">
+                            <button className="difficulty" onClick={() => setSelectedDifficulty('easy')}>Easy</button>
+                        </div>
+
+
+                        <div className="difficulty-border">
+                            <button className="difficulty" onClick={() => setSelectedDifficulty('medium')}>Medium</button>
+                        </div>
+
+                        <div className="difficulty-border">
+                            <button className="difficulty" onClick={() => setSelectedDifficulty('hard')}>Hard</button>
+                        </div>
+                    </div>
+                    <div className='Start-button-border'>
+                        <button className='Start-button' onClick={startGame}>{gameStatus === 'over' ? 'Play Again' : 'Start Game'}</button>
+                    </div>
+
                 </>
-            )}
+            )
+            }
+
+            {
+                gameStatus === 'active' && (
+                    <>
+                        <Round
+                            difficultyRating={difficultyRating}
+                            roundNumber={questionCount + 1}
+                            isActive={gameStatus === 'active'}
+                            onCorrectAnswer={handleCorrectAnswer}
+                            onWrongAnswer={handleWrongAnswer}
+                            onTimeUp={handleTimeUp}
+                            renderQuestion={(onAnswer) => (
+                                currentQuestion ? (
+
+                                    <QuestionBox question={currentQuestion} onAnswer={onAnswer} />
+                                ) : (
+                                    <p>Loading question...</p>
+                                )
+                            )}
+                        />
+                        <button onClick={handleCorrectAnswer}>Correct</button>
+                    </>
+                )
+            }
             <div className='Reward'>
-            <RewardSystem level={questionCount} />
+                <RewardSystem level={questionCount} />
             </div>
-        </div>
+        </div >
     );
 };
 
