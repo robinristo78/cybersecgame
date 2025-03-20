@@ -7,9 +7,13 @@ import Login from './components/UI/Login/Login'
 import Ask from './components/UI/Ask/Ask'
 import Poll from './components/UI/Poll/Poll'
 import MainLogo from './components/UI/Logo/Logo'
+import './App.css'
+import GameMusic from './components/GameMusic';
+import GameHistory from './components/Game/GameHistory';
 
 function App() {
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
+  const [gameStatus, setGameStatus] = useState('notStarted');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Check login status on component mount
@@ -25,35 +29,31 @@ function App() {
 
   return (
     <div className="p-4 text-center">
-      <div style={{padding: '20px', display: "flex"}}>
+      <div className="top-buttons" style={{padding: '20px', display: "flex"}}>
         <MuteButton />
         <HelpButton />
         {/* <LeaderboardButton  /> */}
+        <GameHistory gameStatus={gameStatus} />
       </div>
       <div className="card">
-      <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       </div>
-      <div className="card">
+      <div>
         <Poll />
       </div>
-      <div className="card">
+      <div>
         <Ask />
       </div>
-      <div className="card">
+      <div>
         <MainLogo />
       </div>
       <div>
-          {/* Difficulty valiku nupud */}
-          <div className="difficulty">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('easy')}>Easy</button>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('medium')}>Medium</button>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('hard')}>Hard</button>
-          </div>
-
-          {/* comment: GameController'is on start nupp */}
-          <GameController selectedDifficulty={selectedDifficulty} />
+        <GameMusic />
       </div>
-    </div>
+          {/* comment: GameController'is on start nupp */}
+          <GameController selectedDifficulty={selectedDifficulty} setSelectedDifficulty={setSelectedDifficulty}  />
+      </div>
+
   );
 }
 

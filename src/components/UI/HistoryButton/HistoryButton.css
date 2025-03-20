@@ -1,11 +1,10 @@
-.help-image-button {
-    background-image: url("../../../assets/img/RULES.png");
+.history-button {
+    background-image: url("../../../assets/img/Leaderboard.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    margin-left: 7px;
     width: 113px;
-    height: 105px;
+    height: 103px;
   }

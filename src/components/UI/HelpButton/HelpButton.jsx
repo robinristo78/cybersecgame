@@ -19,9 +19,9 @@ function HelpButton() {
           <p>Each correct answer allows you to progress, leading to more challenging questions and greater rewards.</p>
           <p>You have three lifelines located in the bottom right.</p>
           <ol>
-            <li>Ask an Chatbot - It provides answers with 80% accuracy.</li>
+            {/* <li>Ask an Chatbot - It provides answers with 80% accuracy.</li> */}
             <li>New question - Swap out the current question if you're stuck.</li>
-            <li>Word on the Street - See what the streets think is the correct answer.</li>
+            {/* <li>Word on the Street - See what the streets think is the correct answer.</li> */}
           </ol>
         </Popup>
       </div>

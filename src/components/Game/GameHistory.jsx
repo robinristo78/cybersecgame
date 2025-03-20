@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import HistoryButton from '../UI/HistoryButton/HistoryButton';
 
 const LOCAL_STORAGE_KEY = 'gameHistory';
 
@@ -7,6 +8,12 @@ const GameHistory = ({ gameStatus, gameData }) => {
     const clientId = localStorage.getItem("clientId"); // Get ClientId from localStorage
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; // Check login status
     
+    const [showPopup, setShowPopup] = useState(false);
+      
+    const togglePopup = () => {
+        setShowPopup((prev) => !prev);
+        };
+
     // laeb history LocalStorage'ist
     useEffect(() => {
         const storedHistory = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
@@ -49,15 +56,16 @@ const GameHistory = ({ gameStatus, gameData }) => {
 
     return (
         <div className="game-history">
-            <h2>Game History</h2>
-            {history.length > 0 ? (
+            <HistoryButton>
+                  <h2>Game History</h2>
+                  {history.length > 0 ? (
                 <ul>
-                    {history.map((game, index) => (
-                        <li key={index}>
-                            <strong>{new Date(game.played_at).toLocaleString()}</strong> - {game.difficulty} - {game.score} points
-                        </li>
-                    ))}
-                </ul>
+                            {history.map((game, index) => (
+                                <li key={index}>
+                                    <strong>{new Date(game.played_at).toLocaleString()}</strong> - {game.difficulty} - {game.score} points
+                                </li>
+                            ))}
+                        </ul>
             ) : (
                 <p>
                     {isLoggedIn
@@ -65,6 +73,7 @@ const GameHistory = ({ gameStatus, gameData }) => {
                         : "No games found. Log in to see your game history."}
                 </p>
             )}
+            </HistoryButton>
         </div>
     );
 };

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Round from './Round';
 import RewardSystem from './RewardSystem.jsx';
 import REWARDS from './RewardMap.jsx';
-import GameHistory from './GameHistory.jsx';
 import QuestionBox from '../Questions/QuestionBox.jsx';
 import questionsData from '../Questions/questions.json';
+import './GameController.css';
 
 const LOCAL_STORAGE_KEY = 'gameHistory';
 
-const GameController = ({ selectedDifficulty }) => {
+const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
     const baseDifficulty = 1;
     
     const difficultyModifiers = {
@@ -116,8 +116,25 @@ const GameController = ({ selectedDifficulty }) => {
 
     return (
         <div className="game-controller">
-
-            {gameStatus === 'notStarted' && <button onClick={startGame}>Start Game</button>}
+            {(gameStatus === 'notStarted' || gameStatus === 'over') && (
+                <>
+                {gameStatus === 'over' && (
+                    <div>
+                        {gameResult === 'victory' ? (
+                            <h1>Congratulations! You won the game!</h1>
+                        ) : (
+                            <h1>Game Over!</h1>
+                        )} 
+                    </div>
+                )}
+                <div className="difficulty">
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('easy')}>Easy</button>
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('medium')}>Medium</button>
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('hard')}>Hard</button>
+                    </div>
+                    <button onClick={startGame}>{gameStatus === 'over' ? 'Play Again' : 'Start Game'}</button>
+                </>
+            )}
             
             {gameStatus === 'active' && (
                 <>
@@ -140,17 +157,9 @@ const GameController = ({ selectedDifficulty }) => {
                     <button onClick={handleCorrectAnswer}>Correct</button>
                 </>
             )}
-
+            <div className='Reward'>
             <RewardSystem level={questionCount} />
-
-            {gameStatus === 'over' && (
-            <div>
-                {gameResult === 'victory' ? <p>Congratulations, you won!</p> : <p>Game Over.</p>}
-                <button onClick={startGame}>Play Again</button>
             </div>
-            )}
-    
-            <GameHistory gameStatus={gameStatus} />
         </div>
     );
 };

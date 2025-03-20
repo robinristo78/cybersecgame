@@ -1,8 +1,8 @@
 
 .popup-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 10vw;
   display: flex;
   width: 510px;
   height: 410px;
@@ -25,7 +25,12 @@
   background: #000670;
   overflow: hidden;
 }
-  
+
+.popup-content {
+  max-height: calc(100% - 40px); /* Adjust based on padding and button height */
+  overflow-y: auto;
+}
+
   /* Optional: close button styling */
 .popup-content-container button {
   position: absolute;

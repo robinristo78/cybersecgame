@@ -1,0 +1,9 @@
+.Reward {
+    position: absolute; /* Position the rewards container absolutely */
+    left: 0; /* Align it to the left */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Adjust for exact vertical centering */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
