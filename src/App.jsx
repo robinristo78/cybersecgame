@@ -7,9 +7,11 @@ import Login from './components/UI/Login/Login'
 import Ask from './components/UI/Ask/Ask'
 import Poll from './components/UI/Poll/Poll'
 import MainLogo from './components/UI/Logo/Logo'
+import GameHistory from './components/Game/GameHistory';
 
 function App() {
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
+  const [gameStatus, setGameStatus] = useState('notStarted');
 
 // import React from 'react';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -22,6 +24,7 @@ function App() {
         <MuteButton />
         <HelpButton />
         {/* <LeaderboardButton  /> */}
+        <GameHistory gameStatus={gameStatus} />
       </div>
       <div className="card">
         <Login />
@@ -36,15 +39,8 @@ function App() {
         <MainLogo />
       </div>
       <div>
-          {/* Difficulty valiku nupud */}
-          <div className="difficulty">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('easy')}>Easy</button>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('medium')}>Medium</button>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('hard')}>Hard</button>
-          </div>
-
           {/* comment: GameController'is on start nupp */}
-          <GameController selectedDifficulty={selectedDifficulty} />
+          <GameController selectedDifficulty={selectedDifficulty} setSelectedDifficulty={setSelectedDifficulty}  />
       </div>
     </div>
   );
