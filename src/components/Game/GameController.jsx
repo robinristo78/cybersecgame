@@ -8,7 +8,7 @@ import './GameController.css';
 
 const LOCAL_STORAGE_KEY = 'gameHistory';
 
-const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
+const GameController = ({ selectedDifficulty, setSelectedDifficulty, gameStatus, setGameStatus, handleGameEnd }) => {
     const baseDifficulty = 1;
     
     const difficultyModifiers = {
@@ -21,7 +21,6 @@ const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
 
     const [difficultyRating, setDifficultyRating] = useState(initialDifficulty);
     const [questionCount, setQuestionCount] = useState(0);
-    const [gameStatus, setGameStatus] = useState('notStarted');
     const [gameResult, setGameResult] = useState(null);
     const [currentQuestion, setCurrentQuestion] = useState(null);
     const [usedQuestionIds, setUsedQuestionIds] = useState([]);
@@ -75,13 +74,16 @@ const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
 
     const saveGameHistory = (result, newCount) => {
         const history = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
+        const clientId = localStorage.getItem('clientId');
         const newEntry = {
             played_at: new Date().toISOString(),
             difficulty: selectedDifficulty,
             questionCount: newCount,
             score: newCount === 15 ? 1000000 : (REWARDS[newCount] || 0), // Ensure 1M reward at 15
+            clientId: clientId || null,
         };
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([...history, newEntry]));
+        return newEntry.score;
     };
     
 
@@ -95,7 +97,8 @@ const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
     const endGame = (result, finalQuestionCount = questionCount) => {
         setGameStatus('over');
         setGameResult(result);
-        saveGameHistory(result, finalQuestionCount);
+        const score = saveGameHistory(result, finalQuestionCount);
+        handleGameEnd(result, finalQuestionCount, score);
     };
 
     const handleCorrectAnswer = () => {

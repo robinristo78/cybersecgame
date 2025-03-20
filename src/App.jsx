@@ -14,6 +14,7 @@ import GameHistory from './components/Game/GameHistory';
 function App() {
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
   const [gameStatus, setGameStatus] = useState('notStarted');
+  const [gameData, setGameData] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Check login status on component mount
@@ -22,10 +23,16 @@ function App() {
     setIsLoggedIn(loggedInStatus);
   }, []);
 
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import HomePage from './components/HomePage';
-// import GamePage from './components/GamePage';
+  const handleGameEnd = (result, questionCount) => {
+    setGameStatus('over');
+    setGameData({
+      result,
+      questionCount,
+      difficulty: selectedDifficulty,
+      score,
+      played_at: new Date().toISOString(),
+    });
+  };
 
   return (
     <div className="p-4 text-center">
@@ -33,37 +40,29 @@ function App() {
         <MuteButton />
         <HelpButton />
         {/* <LeaderboardButton  /> */}
-        <GameHistory gameStatus={gameStatus} />
-      </div>
-      <div className="card">
-        <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-      </div>
-      <div>
-        <Poll />
-      </div>
-      <div>
-        <Ask />
-      </div>
-      <div>
-        <MainLogo />
-      </div>
-      <div>
-        <GameMusic />
-      </div>
-          {/* comment: GameController'is on start nupp */}
-          <GameController selectedDifficulty={selectedDifficulty} setSelectedDifficulty={setSelectedDifficulty}  />
+        <GameHistory gameStatus={gameStatus} gameData={gameData} />
       </div>
 
+      <Login className="card" isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+
+      <Poll />
+
+      <Ask />
+
+      <MainLogo />
+
+      <GameMusic />
+
+        {/* comment: GameController'is on start nupp */}
+        <GameController 
+          selectedDifficulty={selectedDifficulty} 
+          setSelectedDifficulty={setSelectedDifficulty}
+          gameStatus={gameStatus}
+          setGameStatus={setGameStatus}
+          handleGameEnd={handleGameEnd}
+        />
+    </div>
   );
 }
-
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<HomePage />} />
-//         <Route path="/game" element={<GamePage />} />
-//       </Routes>
-//     </Router>
-//   );
-// };
 
 export default App;

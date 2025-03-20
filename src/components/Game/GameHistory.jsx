@@ -30,12 +30,14 @@ const GameHistory = ({ gameStatus, gameData }) => {
         console.log("Filtered History:", filteredHistory);
         
         setHistory(filteredHistory);
+        
+    }, [clientId, isLoggedIn]);
 
-        // Save game history when the game ends
-        if (gameStatus === 'ended' && gameData) {
+    useEffect(() => {
+        if (gameStatus === 'over' && gameData) {
             saveGameHistory(gameData);
         }
-    }, [gameStatus, gameData, clientId, isLoggedIn]);
+    }, [gameStatus, gameData]); 
 
     const saveGameHistory = (game) => {
         const storedHistory = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
@@ -52,27 +54,28 @@ const GameHistory = ({ gameStatus, gameData }) => {
 
         // Salvesta uuendatud ajalugu LocalStorage'i
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updatedHistory));
+        setHistory(updatedHistory);
     };
 
     return (
         <div className="game-history">
             <HistoryButton>
                   <h2>Game History</h2>
-                  {history.length > 0 ? (
-                <ul>
+                    {history.length > 0 ? (
+                        <ul>
                             {history.map((game, index) => (
                                 <li key={index}>
                                     <strong>{new Date(game.played_at).toLocaleString()}</strong> - {game.difficulty} - {game.score} points
                                 </li>
                             ))}
                         </ul>
-            ) : (
-                <p>
-                    {isLoggedIn
-                        ? "No games found for your account."
-                        : "No games found. Log in to see your game history."}
-                </p>
-            )}
+                    ) : (
+                        <p>
+                            {isLoggedIn
+                                ? "No games found for your account."
+                                : "No games found. Log in to see your game history."}
+                        </p>
+                )}
             </HistoryButton>
         </div>
     );
