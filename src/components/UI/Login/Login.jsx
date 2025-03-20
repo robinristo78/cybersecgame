@@ -1,7 +1,6 @@
 import React from "react";
 import "./Login.css";
 import { GoogleLogin } from "@react-oauth/google";
-import googleLogo from '../assets/img/sound.png'; // Import your image
 
 const Login = () => {
   const handleSuccess = (response) => {

@@ -1,6 +1,6 @@
 import React from 'react'
-import "./Poll.css";
-import AskActive from '../assets/img/Thought_active.png'; 
+import "./Ask.css";
+import AskActive from '../../../assets/img/Thought_active.png'; 
 
 const Ask = () => {
   return (

@@ -3,6 +3,9 @@ import MuteButton from "./components/UI/MuteButton/MuteButton";
 import HelpButton from "./components/UI/HelpButton/HelpButton";
 import LeaderboardButton from "./components/UI/LeaderboardButton/LeaderboardButton";
 import GameController from './components/Game/GameController';
+import Login from './components/UI/Login/Login'
+import Ask from './components/UI/Ask/Ask'
+import Poll from './components/UI/Poll/Poll'
 
 function App() {
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
@@ -21,6 +24,12 @@ function App() {
       </div>
       <div className="card">
         <Login />
+      </div>
+      <div className="card">
+        <Poll />
+      </div>
+      <div className="card">
+        <Ask />
       </div>
       <div>
         <h1 className="text-2xl font-bold mb-4">Who Wants To Be A Cyber Security Specialist?</h1>
