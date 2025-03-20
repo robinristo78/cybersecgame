@@ -1,10 +1,10 @@
 .img-logo {
+    top: -8vh; /* Adjust this value to move the logo higher or lower */
     padding: 1rem auto; /* Equivalent to p-4 */
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 10px auto;
     width: 394px;
     height: 394px;
-    border-radius: 50px;
+    border-radius: 250px;
+    position: relative; /* Ensure the logo is positioned relative to its container */
 }

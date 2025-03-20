@@ -5,6 +5,7 @@ import REWARDS from './RewardMap.jsx';
 import GameHistory from './GameHistory.jsx';
 import QuestionBox from '../Questions/QuestionBox.jsx';
 import questionsData from '../Questions/questions.json';
+import './GameController.css';
 
 const LOCAL_STORAGE_KEY = 'gameHistory';
 
@@ -103,9 +104,9 @@ const GameController = ({ selectedDifficulty }) => {
                     />
                 </>
             )}
-
-            <RewardSystem level={questionCount} />
-
+            <div className="Reward">
+            <RewardSystem  level={questionCount} />
+            </div>
             {gameStatus === 'over' && (
             <div>
                 {gameResult === 'victory' ? <p>Congratulations, you won!</p> : <p>Game Over.</p>}

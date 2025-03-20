@@ -4,8 +4,8 @@ import CyberLogo from '../../../assets/img/Cybersec.webp';
 
 const MainLogo = () => {
   return (
-    <div className='img-logo'>
-         <img src={CyberLogo} alt="logo" />
+    <div >
+      <img className='img-logo' src={CyberLogo} alt="logo" />
     </div>
   )
 }
