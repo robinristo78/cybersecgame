@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import RoundTimer from "./RoundTimer";
-import QuestionBox from "../Questions/QuestionBox";
 
 const Round = ({
     difficultyRating,
@@ -11,9 +10,12 @@ const Round = ({
     onTimeUp,
     renderQuestion
 }) => {
+    const [resetTimer, setResetTimer] = useState(0);
+
     // Adapt onAnswer to work with GameController's callbacks
     const handleAnswer = (isCorrect) => {
         if (isCorrect) {
+            setResetTimer((prev) => prev + 1);
             onCorrectAnswer();
         } else {
             onWrongAnswer();
@@ -22,7 +24,7 @@ const Round = ({
 
     return (
         <div>
-            <RoundTimer duration={60} isActive={isActive} onTimeUp={onTimeUp} />
+            <RoundTimer duration={60} isActive={isActive} onTimeUp={onTimeUp} resetTrigger={resetTimer} />
             {renderQuestion ? (
                 renderQuestion(handleAnswer) // Pass handleAnswer to renderQuestion
             ) : (

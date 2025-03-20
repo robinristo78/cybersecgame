@@ -13,11 +13,13 @@ function Popup({ show, onClose, children }) {
   return (
     <div className="popup-overlay" onClick={handleOverlayClick}>
       <div className="popup-content-container">
-        {children}
+        <div className="popup-content">
+          {children}
+        </div>
         <button onClick={onClose}>X</button>
       </div>
     </div>
-  );
+    );
 }
 
 export default Popup;

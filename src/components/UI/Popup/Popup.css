@@ -25,7 +25,12 @@
   background: #000670;
   overflow: hidden;
 }
-  
+
+.popup-content {
+  max-height: calc(100% - 40px); /* Adjust based on padding and button height */
+  overflow-y: auto;
+}
+
   /* Optional: close button styling */
 .popup-content-container button {
   position: absolute;

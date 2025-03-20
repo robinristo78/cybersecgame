@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Round from './Round';
 import RewardSystem from './RewardSystem.jsx';
 import REWARDS from './RewardMap.jsx';
-import GameHistory from './GameHistory.jsx';
 import QuestionBox from '../Questions/QuestionBox.jsx';
 import questionsData from '../Questions/questions.json';
 import './GameController.css';
 
 const LOCAL_STORAGE_KEY = 'gameHistory';
 
-const GameController = ({ selectedDifficulty }) => {
+const GameController = ({ selectedDifficulty, setSelectedDifficulty }) => {
     const baseDifficulty = 1;
     
     const difficultyModifiers = {
@@ -25,6 +24,13 @@ const GameController = ({ selectedDifficulty }) => {
     const [gameStatus, setGameStatus] = useState('notStarted');
     const [gameResult, setGameResult] = useState(null);
     const [currentQuestion, setCurrentQuestion] = useState(null);
+    const [usedQuestionIds, setUsedQuestionIds] = useState([]);
+
+    const getRandomQuestions = (questions) => {
+        const shuffled = [...questions].sort(() => Math.random() - 0.5);
+        return shuffled;
+    };
+    
 
     // Load a new question when difficultyRating or questionCount changes
     useEffect(() => {
@@ -32,26 +38,44 @@ const GameController = ({ selectedDifficulty }) => {
             console.error("Questions data is empty or missing.");
             return;
         }
-        const availableQuestions = questionsData.filter(q => q.difficulty_rating === difficultyRating);
+
+
+        const availableQuestions = questionsData.filter(
+            q => q.difficulty_rating === difficultyRating && !usedQuestionIds.includes(q.id)
+        );
+
+
         if (availableQuestions.length === 0) {
-            console.error("No questions available for difficulty:", difficultyRating);
+            console.error("No unused questions available for difficulty:", difficultyRating);
+            // Reset usedQuestionIds to recycle questions, or end game
+            setUsedQuestionIds([]);
+            const fallbackQuestions = questionsData.filter(q => q.difficulty_rating === difficultyRating);
+            const shuffledQuestions = getRandomQuestions(fallbackQuestions); // Shuffle all questions of the same difficulty
+            const newQuestion = shuffledQuestions[0];
+            setCurrentQuestion(newQuestion);
+            if (newQuestion) setUsedQuestionIds([newQuestion.id]);
             return;
         }
-        // Simple selection: cycle through questions or pick randomly
-        const questionIndex = questionCount % availableQuestions.length;
-        setCurrentQuestion(availableQuestions[questionIndex]);
+
+        const shuffledAvailableQuestions = getRandomQuestions(availableQuestions); // Shuffle available questions
+        const newQuestion = shuffledAvailableQuestions[0]; // Select the first shuffled question
+        setCurrentQuestion(newQuestion);
+        setUsedQuestionIds(prev => [...prev, newQuestion.id]);
+
+        console.log(`Picked question ID: ${newQuestion.id}, Difficulty: ${newQuestion.difficulty_rating}`);
     }, [difficultyRating, questionCount]);
 
-    const saveGameHistory = (result) => {
+    const saveGameHistory = (result, newCount) => {
         const history = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
         const newEntry = {
             played_at: new Date().toISOString(),
             difficulty: selectedDifficulty,
-            questionCount: questionCount + 1,
-            score: REWARDS[questionCount + 1] || 0,
+            questionCount: newCount,
+            score: newCount === 15 ? 1000000 : (REWARDS[newCount] || 0), // Ensure 1M reward at 15
         };
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([...history, newEntry]));
     };
+    
 
     const startGame = () => {
         setGameStatus('active');
@@ -60,21 +84,23 @@ const GameController = ({ selectedDifficulty }) => {
         setDifficultyRating(initialDifficulty);
     };
 
-    const endGame = (result) => {
+    const endGame = (result, finalQuestionCount = questionCount) => {
         setGameStatus('over');
         setGameResult(result);
-        saveGameHistory(result);
+        saveGameHistory(result, finalQuestionCount);
     };
 
     const handleCorrectAnswer = () => {
         const newCount = questionCount + 1;
         setQuestionCount(newCount);
-        if (newCount >= 15) {
-            endGame('victory');
+    
+        if (newCount === 15) {
+            setTimeout(() => endGame('victory', newCount), 0); // Pass newCount
         } else if (newCount % 3 === 0) {
             setDifficultyRating((prev) => prev + 1);
         }
-        console.log(difficultyRating);
+    
+        // console.log(difficultyRating, questionCount, newCount);
     };
 
     const handleWrongAnswer = () => endGame('loss');
@@ -82,8 +108,25 @@ const GameController = ({ selectedDifficulty }) => {
 
     return (
         <div className="game-controller">
-
-            {gameStatus === 'notStarted' && <button onClick={startGame}>Start Game</button>}
+            {(gameStatus === 'notStarted' || gameStatus === 'over') && (
+                <>
+                {gameStatus === 'over' && (
+                    <div>
+                        {gameResult === 'victory' ? (
+                            <h1>Congratulations! You won the game!</h1>
+                        ) : (
+                            <h1>Game Over!</h1>
+                        )} 
+                    </div>
+                )}
+                <div className="difficulty">
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('easy')}>Easy</button>
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('medium')}>Medium</button>
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => setSelectedDifficulty('hard')}>Hard</button>
+                    </div>
+                    <button onClick={startGame}>{gameStatus === 'over' ? 'Play Again' : 'Start Game'}</button>
+                </>
+            )}
             
             {gameStatus === 'active' && (
                 <>
@@ -96,25 +139,19 @@ const GameController = ({ selectedDifficulty }) => {
                         onTimeUp={handleTimeUp}
                         renderQuestion={(onAnswer) => (
                             currentQuestion ? (
+                                
                                 <QuestionBox question={currentQuestion} onAnswer={onAnswer} />
                             ) : (
                                 <p>Loading question...</p>
                             )
                         )}
                     />
+                    <button onClick={handleCorrectAnswer}>Correct</button>
                 </>
             )}
-            <div className="Reward">
-            <RewardSystem  level={questionCount} />
-            </div>
-            {gameStatus === 'over' && (
-            <div>
-                {gameResult === 'victory' ? <p>Congratulations, you won!</p> : <p>Game Over.</p>}
-                <button onClick={startGame}>Play Again</button>
-            </div>
-            )}
+
+            <RewardSystem level={questionCount} />
     
-            <GameHistory gameStatus={gameStatus} />
         </div>
     );
 };

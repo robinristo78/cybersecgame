@@ -9,9 +9,11 @@ import Poll from './components/UI/Poll/Poll'
 import MainLogo from './components/UI/Logo/Logo'
 import './App.css'
 import GameMusic from './components/GameMusic';
+import GameHistory from './components/Game/GameHistory';
 
 function App() {
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
+  const [gameStatus, setGameStatus] = useState('notStarted');
 
 // import React from 'react';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -24,6 +26,7 @@ function App() {
         <MuteButton />
         <HelpButton />
         {/* <LeaderboardButton  /> */}
+        <GameHistory gameStatus={gameStatus} />
       </div>
       <div className="card">
         <Login />
@@ -40,18 +43,10 @@ function App() {
       <div>
         <GameMusic />
       </div>
-      <div>
-          {/* Difficulty valiku nupud */}
-          <div className="difficulty">
-            <button onClick={() => setSelectedDifficulty('easy')}>Easy</button>
-            <button onClick={() => setSelectedDifficulty('medium')}>Medium</button>
-            <button onClick={() => setSelectedDifficulty('hard')}>Hard</button>
-          </div>
-
           {/* comment: GameController'is on start nupp */}
-          <GameController selectedDifficulty={selectedDifficulty} />
+          <GameController selectedDifficulty={selectedDifficulty} setSelectedDifficulty={setSelectedDifficulty}  />
       </div>
-    </div>
+
   );
 }
 
