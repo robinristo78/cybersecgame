@@ -49,7 +49,15 @@ const GameController = ({ selectedDifficulty }) => {
             console.error("No unused questions available for difficulty:", difficultyRating);
             // Reset usedQuestionIds to recycle questions, or end game
             setUsedQuestionIds([]);
-            const fallbackQuestions = questionsData.filter(q => q.difficulty_rating === difficultyRating);
+            const fallbackQuestions = questionsData.filter((q) => q.difficulty_rating === difficultyRating);
+
+            if (fallbackQuestions.length === 0) {
+                console.error("No questions available for this difficulty.");
+                setGameStatus('over');
+                setGameResult('noQuestions');
+                return;
+            }
+
             const shuffledQuestions = getRandomQuestions(fallbackQuestions); // Shuffle all questions of the same difficulty
             const newQuestion = shuffledQuestions[0];
             setCurrentQuestion(newQuestion);

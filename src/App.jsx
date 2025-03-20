@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MuteButton from "./components/UI/MuteButton/MuteButton";
 import HelpButton from "./components/UI/HelpButton/HelpButton";
 import LeaderboardButton from "./components/UI/LeaderboardButton/LeaderboardButton";
@@ -10,6 +10,13 @@ import MainLogo from './components/UI/Logo/Logo'
 
 function App() {
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Check login status on component mount
+  useEffect(() => {
+    const loggedInStatus = localStorage.getItem("isLoggedIn") === "true";
+    setIsLoggedIn(loggedInStatus);
+  }, []);
 
 // import React from 'react';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -24,7 +31,7 @@ function App() {
         {/* <LeaderboardButton  /> */}
       </div>
       <div className="card">
-        <Login />
+      <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       </div>
       <div className="card">
         <Poll />

@@ -1118,228 +1118,226 @@
             "Share your passwords"
         ]
     },
+    {
+        "id": 100,
+        "difficulty_rating": 2,
+        "question": "What should you do if someone asks for your password over the phone?",
+        "correct_answer": "Never share it",
+        "wrong_answers": [
+            "Share it if they seem trustworthy",
+            "Ask them to email you first",
+            "Only share part of it"
+        ]
+    },
+    {
+        "id": 101,
+        "difficulty_rating": 2,
+        "question": "What is a safe way to handle suspicious links in emails?",
+        "correct_answer": "Do not click them",
+        "wrong_answers": [
+            "Click them to check",
+            "Forward them to friends",
+            "Reply to the sender"
+        ]
+    },
+    {
+        "id": 102,
+        "difficulty_rating": 2,
+        "question": "What should you do if a website asks for your credit card details unexpectedly?",
+        "correct_answer": "Leave the website",
+        "wrong_answers": [
+            "Enter your details quickly",
+            "Call the website support",
+            "Refresh the page and try again"
+        ]
+    },
+    {
+        "id": 103,
+        "difficulty_rating": 2,
+        "question": "What is a common sign of a scam phone call?",
+        "correct_answer": "Asking for personal info",
+        "wrong_answers": [
+            "Friendly tone",
+            "Short conversation",
+            "Asking about your hobbies"
+        ]
+    },
+    {
+        "id": 104,
+        "difficulty_rating": 2,
+        "question": "What should you do if you receive a message saying you won a prize?",
+        "correct_answer": "Ignore and delete it",
+        "wrong_answers": [
+            "Click the link to claim it",
+            "Reply with your details",
+            "Call the number provided"
+        ]
+    },
+    {
+        "id": 105,
+        "difficulty_rating": 2,
+        "question": "What is the safest way to use online banking?",
+        "correct_answer": "Use your bank's official app",
+        "wrong_answers": [
+            "Click links in emails",
+            "Use public Wi-Fi",
+            "Share your login details"
+        ]
+    },
+    {
+        "id": 106,
+        "difficulty_rating": 2,
+        "question": "What should you do if a stranger sends you a friend request on social media?",
+        "correct_answer": "Ignore or decline it",
+        "wrong_answers": [
+            "Accept it immediately",
+            "Send them a message",
+            "Share your personal info"
+        ]
+    },
+    {
+        "id": 107,
+        "difficulty_rating": 2,
+        "question": "What is a safe way to handle passwords?",
+        "correct_answer": "Use a password manager",
+        "wrong_answers": [
+            "Write them on paper",
+            "Use the same password everywhere",
+            "Share them with family"
+        ]
+    },
+    {
+        "id": 108,
+        "difficulty_rating": 2,
+        "question": "What should you do if your account is hacked?",
+        "correct_answer": "Change your password",
+        "wrong_answers": [
+            "Ignore it",
+            "Delete the account",
+            "Call your internet provider"
+        ]
+    },
+    {
+        "id": 109,
+        "difficulty_rating": 2,
+        "question": "What is a safe way to handle public Wi-Fi?",
+        "correct_answer": "Avoid entering personal info",
+        "wrong_answers": [
+            "Log into your bank",
+            "Shop online",
+            "Share your passwords"
+        ]
+    },
 
-    [
-        {
-            "id": 100,
-            "difficulty_rating": 2,
-            "question": "What should you do if someone asks for your password over the phone?",
-            "correct_answer": "Never share it",
-            "wrong_answers": [
-                "Share it if they seem trustworthy",
-                "Ask them to email you first",
-                "Only share part of it"
-            ]
-        },
-        {
-            "id": 101,
-            "difficulty_rating": 2,
-            "question": "What is a safe way to handle suspicious links in emails?",
-            "correct_answer": "Do not click them",
-            "wrong_answers": [
-                "Click them to check",
-                "Forward them to friends",
-                "Reply to the sender"
-            ]
-        },
-        {
-            "id": 102,
-            "difficulty_rating": 2,
-            "question": "What should you do if a website asks for your credit card details unexpectedly?",
-            "correct_answer": "Leave the website",
-            "wrong_answers": [
-                "Enter your details quickly",
-                "Call the website support",
-                "Refresh the page and try again"
-            ]
-        },
-        {
-            "id": 103,
-            "difficulty_rating": 2,
-            "question": "What is a common sign of a scam phone call?",
-            "correct_answer": "Asking for personal info",
-            "wrong_answers": [
-                "Friendly tone",
-                "Short conversation",
-                "Asking about your hobbies"
-            ]
-        },
-        {
-            "id": 104,
-            "difficulty_rating": 2,
-            "question": "What should you do if you receive a message saying you won a prize?",
-            "correct_answer": "Ignore and delete it",
-            "wrong_answers": [
-                "Click the link to claim it",
-                "Reply with your details",
-                "Call the number provided"
-            ]
-        },
-        {
-            "id": 105,
-            "difficulty_rating": 2,
-            "question": "What is the safest way to use online banking?",
-            "correct_answer": "Use your bank's official app",
-            "wrong_answers": [
-                "Click links in emails",
-                "Use public Wi-Fi",
-                "Share your login details"
-            ]
-        },
-        {
-            "id": 106,
-            "difficulty_rating": 2,
-            "question": "What should you do if a stranger sends you a friend request on social media?",
-            "correct_answer": "Ignore or decline it",
-            "wrong_answers": [
-                "Accept it immediately",
-                "Send them a message",
-                "Share your personal info"
-            ]
-        },
-        {
-            "id": 107,
-            "difficulty_rating": 2,
-            "question": "What is a safe way to handle passwords?",
-            "correct_answer": "Use a password manager",
-            "wrong_answers": [
-                "Write them on paper",
-                "Use the same password everywhere",
-                "Share them with family"
-            ]
-        },
-        {
-            "id": 108,
-            "difficulty_rating": 2,
-            "question": "What should you do if your account is hacked?",
-            "correct_answer": "Change your password",
-            "wrong_answers": [
-                "Ignore it",
-                "Delete the account",
-                "Call your internet provider"
-            ]
-        },
-        {
-            "id": 109,
-            "difficulty_rating": 2,
-            "question": "What is a safe way to handle public Wi-Fi?",
-            "correct_answer": "Avoid entering personal info",
-            "wrong_answers": [
-                "Log into your bank",
-                "Shop online",
-                "Share your passwords"
-            ]
-        },
+    {
+        "id": 110,
+        "difficulty_rating": 3,
+        "question": "What should you do if a website looks suspicious?",
+        "correct_answer": "Leave the website immediately",
+        "wrong_answers": [
+            "Enter your details quickly",
+            "Click on all the links",
+            "Download any files offered"
+        ]
+    },
+    {
+        "id": 111,
+        "difficulty_rating": 3,
+        "question": "What is the safest way to handle emails from unknown senders?",
+        "correct_answer": "Delete them without opening",
+        "wrong_answers": [
+            "Reply to ask who they are",
+            "Click any links to check",
+            "Forward them to friends"
+        ]
+    },
+    {
+        "id": 112,
+        "difficulty_rating": 3,
+        "question": "What should you do if someone claims to be from your bank and asks for your PIN?",
+        "correct_answer": "Refuse and contact your bank",
+        "wrong_answers": [
+            "Give them your PIN",
+            "Ask them to call back later",
+            "Share only part of your PIN"
+        ]
+    },
+    {
+        "id": 113,
+        "difficulty_rating": 3,
+        "question": "What is the safest way to update your computer?",
+        "correct_answer": "Use official tools",
+        "wrong_answers": [
+            "Download updates from emails",
+            "Use third-party websites",
+            "Ignore updates completely"
+        ]
+    },
+    {
+        "id": 114,
+        "difficulty_rating": 3,
+        "question": "What should you do if you receive a call claiming you won a prize?",
+        "correct_answer": "Hang up immediately",
+        "wrong_answers": [
+            "Give them your details",
+            "Ask for more information",
+            "Call them back later"
+        ]
+    },
+    {
+        "id": 115,
+        "difficulty_rating": 3,
+        "question": "What is the safest way to store important passwords?",
+        "correct_answer": "Use a password manager",
+        "wrong_answers": [
+            "Write them on sticky notes",
+            "Save them in a text file",
+            "Share them with family"
+        ]
+    },
+    {
+        "id": 116,
+        "difficulty_rating": 3,
+        "question": "What should you do if you suspect your device has been hacked?",
+        "correct_answer": "Disconnect from the internet",
+        "wrong_answers": [
+            "Keep using it as normal",
+            "Call a random technician",
+            "Ignore the issue"
+        ]
+    },
+    {
+        "id": 117,
+        "difficulty_rating": 3,
+        "question": "What is a sign of a secure website?",
+        "correct_answer": "Padlock in the URL bar",
+        "wrong_answers": [
+            "Bright colors on the page",
+            "A long and complicated URL",
+            "No contact information"
+        ]
+    },
+    {
+        "id": 118,
+        "difficulty_rating": 3,
+        "question": "What should you do if you receive a message asking for your personal information?",
+        "correct_answer": "Ignore and delete the message",
+        "wrong_answers": [
+            "Reply with your details",
+            "Ask for more information",
+            "Forward it to friends"
+        ]
+    },
+    {
+        "id": 119,
+        "difficulty_rating": 3,
+        "question": "What is the safest way to handle software downloads?",
+        "correct_answer": "Download from official websites",
+        "wrong_answers": [
+            "Use links from emails",
+            "Download from any website",
+            "Ask a friend to send it"
+        ]
+    }
 
-        {
-            "id": 110,
-            "difficulty_rating": 3,
-            "question": "What should you do if a website looks suspicious?",
-            "correct_answer": "Leave the website immediately",
-            "wrong_answers": [
-                "Enter your details quickly",
-                "Click on all the links",
-                "Download any files offered"
-            ]
-        },
-        {
-            "id": 111,
-            "difficulty_rating": 3,
-            "question": "What is the safest way to handle emails from unknown senders?",
-            "correct_answer": "Delete them without opening",
-            "wrong_answers": [
-                "Reply to ask who they are",
-                "Click any links to check",
-                "Forward them to friends"
-            ]
-        },
-        {
-            "id": 112,
-            "difficulty_rating": 3,
-            "question": "What should you do if someone claims to be from your bank and asks for your PIN?",
-            "correct_answer": "Refuse and contact your bank",
-            "wrong_answers": [
-                "Give them your PIN",
-                "Ask them to call back later",
-                "Share only part of your PIN"
-            ]
-        },
-        {
-            "id": 113,
-            "difficulty_rating": 3,
-            "question": "What is the safest way to update your computer?",
-            "correct_answer": "Use official tools",
-            "wrong_answers": [
-                "Download updates from emails",
-                "Use third-party websites",
-                "Ignore updates completely"
-            ]
-        },
-        {
-            "id": 114,
-            "difficulty_rating": 3,
-            "question": "What should you do if you receive a call claiming you won a prize?",
-            "correct_answer": "Hang up immediately",
-            "wrong_answers": [
-                "Give them your details",
-                "Ask for more information",
-                "Call them back later"
-            ]
-        },
-        {
-            "id": 115,
-            "difficulty_rating": 3,
-            "question": "What is the safest way to store important passwords?",
-            "correct_answer": "Use a password manager",
-            "wrong_answers": [
-                "Write them on sticky notes",
-                "Save them in a text file",
-                "Share them with family"
-            ]
-        },
-        {
-            "id": 116,
-            "difficulty_rating": 3,
-            "question": "What should you do if you suspect your device has been hacked?",
-            "correct_answer": "Disconnect from the internet",
-            "wrong_answers": [
-                "Keep using it as normal",
-                "Call a random technician",
-                "Ignore the issue"
-            ]
-        },
-        {
-            "id": 117,
-            "difficulty_rating": 3,
-            "question": "What is a sign of a secure website?",
-            "correct_answer": "Padlock in the URL bar",
-            "wrong_answers": [
-                "Bright colors on the page",
-                "A long and complicated URL",
-                "No contact information"
-            ]
-        },
-        {
-            "id": 118,
-            "difficulty_rating": 3,
-            "question": "What should you do if you receive a message asking for your personal information?",
-            "correct_answer": "Ignore and delete the message",
-            "wrong_answers": [
-                "Reply with your details",
-                "Ask for more information",
-                "Forward it to friends"
-            ]
-        },
-        {
-            "id": 119,
-            "difficulty_rating": 3,
-            "question": "What is the safest way to handle software downloads?",
-            "correct_answer": "Download from official websites",
-            "wrong_answers": [
-                "Use links from emails",
-                "Download from any website",
-                "Ask a friend to send it"
-            ]
-        }
-    ]
 ]
