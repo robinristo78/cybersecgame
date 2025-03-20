@@ -9,8 +9,8 @@ const RewardSystem = ({ level }) => {
         {Object.entries(REWARDS)
           .reverse()
           .map(([key, value]) => (
-            <li key={key} style={{ fontWeight: level === Number(key) ? 'bold' : 'normal' }}>
-              Level {key}: {value} points
+            <li key={key} style={{backgroundColor: 'rgb(11, 3, 44)', color: level >= Number(key) ? 'yellow' : 'inherit', fontWeight: level === Number(key) ? 'bold' : 'normal' }}>
+              {value}
             </li>
           ))}
       </ul>
