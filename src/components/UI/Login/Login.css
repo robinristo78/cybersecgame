@@ -1,29 +1,19 @@
-.Gradient {
-    position: absolute; /* Fix the position of the login button */
-    top: 60px; /* Adjust the top position as needed */
-    right: 0px; /* Position it on the right side of the screen */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 265px;
-    height: 51px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: linear-gradient(to bottom,#FFE600, black, #FFE600);
-}
-
-.Login_box {
-    position: absolute; /* Fix the position of the login button */
-    top: 5px; /* Adjust the top position as needed */
-    right: 5px; /* Position it on the right side of the screen */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 245px;
+.login-container {
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+  
+  .login-button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 0; /* Remove padding */
+  }
+  
+  .signout-icon {
+    width: 130px; /* Adjust the size of the icon */
     height: 40px;
-    margin: auto 5px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: #000670;
-    z-index: 1000; /* Ensure it stays on top of other elements */
-}
+    vertical-align: middle; /* Align the icon vertically */
+  }
