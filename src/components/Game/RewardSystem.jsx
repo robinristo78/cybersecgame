@@ -9,7 +9,7 @@ const RewardSystem = ({ level }) => {
         {Object.entries(REWARDS)
           .reverse()
           .map(([key, value]) => (
-            <li key={key} style={{backgroundColor: 'rgb(11, 3, 44)', color: level >= Number(key) ? 'yellow' : 'inherit', fontWeight: level === Number(key) ? 'bold' : 'normal' }}>
+            <li key={key} style={{backgroundColor: 'rgb(25, 25, 92)', borderRadius: '5px', marginTop: '2px',  color: level >= Number(key) ? 'yellow' : 'inherit', fontWeight: level === Number(key) ? 'bold' : 'normal' }}>
               {value}
             </li>
           ))}
